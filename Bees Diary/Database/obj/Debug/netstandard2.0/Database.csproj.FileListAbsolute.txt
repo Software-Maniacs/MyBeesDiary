@@ -12,3 +12,6 @@ C:\Users\Laptop_HP\Documents\GitHub\MyBeesDiary\Bees Diary\Database\obj\Debug\ne
 C:\Users\Laptop_HP\Documents\GitHub\MyBeesDiary\Bees Diary\Database\obj\Debug\netstandard2.0\Database.AssemblyInfo.cs
 C:\Users\Laptop_HP\Documents\GitHub\MyBeesDiary\Bees Diary\Database\obj\Debug\netstandard2.0\Database.dll
 C:\Users\Laptop_HP\Documents\GitHub\MyBeesDiary\Bees Diary\Database\obj\Debug\netstandard2.0\Database.pdb
+C:\Users\Laptop_HP\Documents\GitHub\MyBeesDiary\Bees Diary\Database\bin\Debug\netstandard2.0\MyBeesDiary.dll
+C:\Users\Laptop_HP\Documents\GitHub\MyBeesDiary\Bees Diary\Database\bin\Debug\netstandard2.0\MyBeesDiary.pdb
+C:\Users\Laptop_HP\Documents\GitHub\MyBeesDiary\Bees Diary\Database\obj\Debug\netstandard2.0\Database.csproj.CopyComplete
