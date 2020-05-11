@@ -1,5 +1,5 @@
-﻿using Database.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using MyBeesDiary.Models.Entities;
 using System;
 
 namespace Database
