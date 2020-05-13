@@ -1,0 +1,21 @@
+﻿using Database;
+using System;
+using System.Windows.Input;
+using Xamarin.Essentials;
+using Xamarin.Forms;
+
+namespace My_Bees_Diary.ViewModels
+{
+    public class AboutViewModel : BaseViewModel
+    {
+        public AboutViewModel()
+        {
+            Title = "About";
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://xamarin.com"));
+        }
+
+        public ICommand OpenWebCommand { get; }
+
+        public DatabaseContext _dbContext { get; set; }
+    }
+}
