@@ -36,6 +36,23 @@ namespace Database.Repositories
             }
         }
 
+        public async Task<bool> ContainApiaryWithTheSameName(string apiaryName)
+        {
+            IEnumerable<Apiary> apiaries = await GetAllApiariesAsync();
+            bool isHaveApiaryWithTheSameName = false;
+
+            foreach (var apiary in apiaries)
+            {
+                if (apiary.Name.Equals(apiaryName))
+                {
+                    isHaveApiaryWithTheSameName = true;
+                    break;
+                }
+            }
+
+            return isHaveApiaryWithTheSameName;
+        }
+
         public async Task<IEnumerable<Apiary>> GetAllApiariesAsync()
         {
             try

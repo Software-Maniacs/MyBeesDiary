@@ -35,6 +35,24 @@ namespace Database.Repositories
             }
         }
 
+
+        public async Task<bool> ContainBeehiveWithTheSameName(string beehiveName)
+        {
+            IEnumerable<Beehive> beehives = await GetAllBeehivesAsync();
+            bool isHaveBeehiveWithTheSameName = false;
+
+            foreach (var beehive in beehives)
+            {
+                if (beehive.Name.Equals(beehiveName))
+                {
+                    isHaveBeehiveWithTheSameName = true;
+                    break;
+                }
+            }
+
+            return isHaveBeehiveWithTheSameName;
+        }
+
         public async Task<Beehive> GetBeehiveByIdAsync(int id)
         {
             try

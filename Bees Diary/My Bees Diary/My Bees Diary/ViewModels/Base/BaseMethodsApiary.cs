@@ -4,14 +4,17 @@ using Database.Repositories;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace My_Bees_Diary.ViewModels.Base
 {
     class BaseMethodsApiary
 {
         private DatabaseContext _databaseContext;
-        private ApiaryRepository apiaryRepository;
+        private ApiaryRepository _apiaryRepository;
 
         public BaseMethodsApiary(string databasePath)
         {
@@ -26,6 +29,23 @@ namespace My_Bees_Diary.ViewModels.Base
             string json2 = JsonConvert.SerializeObject(apiary2);
             Console.WriteLine(json);
             Console.WriteLine(json2);
+        }
+
+
+
+        public async void Add(params Apiary[] apiaries)
+        {
+            foreach (var apiary in apiaries)
+            {
+                if(await _apiaryRepository.ContainApiaryWithTheSameName(apiary.Name))
+                {
+                    //We will show a message that in database-apiaries have an apiary with the same name    
+                }
+                else
+                {
+                    await _apiaryRepository.AddApiaryAsync(apiary);
+                }
+            }
         }
     }
 }

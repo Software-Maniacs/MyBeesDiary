@@ -12,6 +12,7 @@ namespace Database.Entities
         }
 
         public int ID { get; set; }
+        public string Name { get; set; }
         public string TypeBeehive { get; set; }
         public string TypeBees { get; set; }
         public int ApiaryID { get; set; }

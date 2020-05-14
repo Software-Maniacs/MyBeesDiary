@@ -30,7 +30,14 @@ namespace My_Bees_Diary.ViewModels.Base
         {
             foreach (var beehive in beehives)
             {
-                await _beehiveRepository.AddBeehiveAsync(beehive);
+                if (await _beehiveRepository.ContainBeehiveWithTheSameName(beehive.Name))
+                {
+                    //The message that the beehive with the same name is exist
+                }
+                else
+                {
+                    await _beehiveRepository.AddBeehiveAsync(beehive);
+                }
             }
         }
 
@@ -42,7 +49,7 @@ namespace My_Bees_Diary.ViewModels.Base
             }
         }
 
-        public async void Compare(Beehive beehive1, Beehive beehive2, string  criterion)
+        public async void Compare(Beehive beehive1, Beehive beehive2)
         {
 
         }
