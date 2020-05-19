@@ -6,7 +6,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using My_Bees_Diary.Services.Repositories;
 
 namespace My_Bees_Diary.Droid
 {
@@ -20,14 +19,9 @@ namespace My_Bees_Diary.Droid
 
             base.OnCreate(savedInstanceState);
 
-            var dbPath = System.IO.Path.Combine(System.Environment.GetFolderPath(
-                System.Environment.SpecialFolder.Personal),
-                "productDB.db"
-                );
-
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App(dbPath));
+            LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
