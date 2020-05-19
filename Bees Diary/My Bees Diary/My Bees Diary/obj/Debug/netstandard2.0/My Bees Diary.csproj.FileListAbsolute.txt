@@ -9,3 +9,16 @@ C:\Users\Laptop_HP\Documents\GitHub\MyBeesDiary\Bees Diary\My Bees Diary\My Bees
 C:\Users\Laptop_HP\Documents\GitHub\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
 C:\Users\Laptop_HP\Documents\GitHub\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.AssemblyInfoInputs.cache
 C:\Users\Laptop_HP\Documents\GitHub\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.AssemblyInfo.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\bin\Debug\netstandard2.0\My Bees Diary.deps.json
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\bin\Debug\netstandard2.0\My Bees Diary.dll
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\bin\Debug\netstandard2.0\ref\My Bees Diary.dll
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\bin\Debug\netstandard2.0\My Bees Diary.pdb
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.csprojAssemblyReference.cache
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.AssemblyInfoInputs.cache
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.AssemblyInfo.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.dll
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\ref\My Bees Diary.dll
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.pdb
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.csproj.CoreCompileInputs.cache
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\XamlC.stamp

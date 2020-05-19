@@ -3,17 +3,16 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using My_Bees_Diary.Services;
 using My_Bees_Diary.Views;
+using My_Bees_Diary.Services.Repositories;
 
 namespace My_Bees_Diary
 {
     public partial class App : Application
     {
-
-        public App()
+        public App(string dbPath)
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new MainPage();
         }
 

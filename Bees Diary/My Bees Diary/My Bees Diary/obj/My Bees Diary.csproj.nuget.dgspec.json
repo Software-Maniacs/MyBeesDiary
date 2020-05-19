@@ -4,14 +4,14 @@
     "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\Database\\Database.csproj": {
+    "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\Database\\Database.csproj",
-        "projectName": "Database",
-        "projectPath": "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\Database\\Database.csproj",
+        "projectUniqueName": "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
+        "projectName": "My Bees Diary",
+        "projectPath": "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
         "packagesPath": "C:\\Users\\Laptop_HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\Database\\obj\\",
+        "outputPath": "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -42,76 +42,19 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[3.1.3, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
-        "projectName": "My Bees Diary",
-        "projectPath": "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
-        "packagesPath": "C:\\Users\\Laptop_HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Laptop_HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.0": {
-            "projectReferences": {
-              "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\Database\\Database.csproj": {
-                "projectPath": "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\Database\\Database.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.0": {
-          "dependencies": {
             "Json.Net": {
               "target": "Package",
               "version": "[1.0.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -123,6 +66,10 @@
               "target": "Package",
               "version": "[12.0.3, )"
             },
+            "SQLiteNetExtensions": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.3.1, )"
@@ -130,6 +77,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.4.0.991265, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.7.335, )"
             }
           },
           "imports": [
