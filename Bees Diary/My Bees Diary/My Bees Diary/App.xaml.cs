@@ -8,13 +8,11 @@ namespace My_Bees_Diary
 {
     public partial class App : Application
     {
-
-        public App()
+        public App(string dbPath)
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new StartPage(dbPath));
         }
 
         protected override void OnStart()
