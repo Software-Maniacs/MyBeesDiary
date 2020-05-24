@@ -529,3 +529,12 @@ C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary.An
 C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\90\build.props
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\90\adb.props
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\90\My Bees Diary.Android.csprojAssemblyReference.cache
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\90\res.flag
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\90\My_Bees_Diary.Android.dll
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\90\My_Bees_Diary.Android.pdb

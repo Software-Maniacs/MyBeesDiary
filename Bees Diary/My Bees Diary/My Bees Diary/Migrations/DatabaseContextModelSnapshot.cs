@@ -72,24 +72,42 @@ namespace MyBeesDiary.Migrations
 
             modelBuilder.Entity("My_Bees_Diary.Models.Entities.Beehive", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<string>("ID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ApiaryID")
                         .HasColumnType("INTEGER");
 
-                    b.Property<decimal>("Power")
+                    b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Number")
+                        .HasColumnType("Text");
+
+                    b.Property<decimal>("Power")
+                        .HasColumnType("DECIMAL");
+
                     b.Property<decimal>("Production")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("DECIMAL");
+
+                    b.Property<int>("Stores")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("TypeBeehive")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TypeBees")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("Feedings")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Reviews")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Treatments")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("ID");
 

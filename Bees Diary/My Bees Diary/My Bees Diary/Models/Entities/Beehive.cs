@@ -21,8 +21,10 @@ namespace My_Bees_Diary.Models.Entities
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
         public string Name { get; set; }
+        public string Number { get; set; }
         public string TypeBeehive { get; set; }
         public string TypeBees { get; set; }
+        public int Stores { get; set; }
         public decimal Production { get; set; }
         public decimal Power { get; set; }
         public int Feedings { get; set; }
@@ -33,11 +35,9 @@ namespace My_Bees_Diary.Models.Entities
         [ManyToOne]
         public virtual Apiary Apiary { get; set; }
 
-        //Hranenieq, Pregled, Tretiraniq
-
         public override string ToString()
         {
-            return $"{ID} {Name} ({TypeBeehive})";
+            return $"{ID} {Name} ({Number})";
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Database;
-using System;
+﻿using System;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -15,7 +14,5 @@ namespace My_Bees_Diary.ViewModels
         }
 
         public ICommand OpenWebCommand { get; }
-
-        public DatabaseContext _dbContext { get; set; }
     }
 }

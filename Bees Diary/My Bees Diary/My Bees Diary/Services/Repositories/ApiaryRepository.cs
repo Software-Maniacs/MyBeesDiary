@@ -52,6 +52,11 @@ namespace My_Bees_Diary.Services.Repositories
             }
         }
 
+        internal Task<bool> ContainApiaryWithTheSameName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<Apiary> GetApiaryByIdAsync(int id)
         {
             try

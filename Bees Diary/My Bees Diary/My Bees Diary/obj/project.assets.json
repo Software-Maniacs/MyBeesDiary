@@ -2106,11 +2106,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
+      "projectUniqueName": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
       "projectName": "My Bees Diary",
-      "projectPath": "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
+      "projectPath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
       "packagesPath": "C:\\Users\\Laptop_HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Laptop_HP\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\obj\\",
+      "outputPath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

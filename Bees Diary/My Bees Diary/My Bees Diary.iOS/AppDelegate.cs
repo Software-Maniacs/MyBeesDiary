@@ -23,7 +23,9 @@ namespace My_Bees_Diary.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            var documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string dbPath = System.IO.Path.Combine(documentsPath, "..", "productDB.db");
+            LoadApplication(new App(dbPath));
 
             return base.FinishedLaunching(app, options);
         }

@@ -49,8 +49,11 @@ namespace MyBeesDiary.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(nullable: true),
+                    Number = table.Column<string>(nullable: false),
                     TypeBeehive = table.Column<string>(nullable: true),
                     TypeBees = table.Column<string>(nullable: true),
+                    Stores = table.Column<int>(nullable: false),
                     Production = table.Column<decimal>(nullable: false),
                     Power = table.Column<decimal>(nullable: false),
                     Feedings = table.Column<int>(nullable: false),

@@ -33,10 +33,10 @@ namespace My_Bees_Diary.Services
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Apiary>()
-                .HasMany(apiary => apiary.Beehives)
-                .WithOne(beehive => beehive.Apiary)
-                .OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<Apiary>();
+                //.HasMany(apiary => apiary.Beehives)
+                //.WithOne(beehive => beehive.Apiary)
+               // .OnDelete(DeleteBehavior.NoAction);
 
             base.OnModelCreating(modelBuilder);
         }

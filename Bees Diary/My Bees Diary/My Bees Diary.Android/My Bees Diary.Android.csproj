@@ -17,7 +17,7 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
@@ -58,9 +58,17 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivitiesPage.cs" />
+    <Compile Include="AddBeehiveContentPage.cs" />
+    <Compile Include="BeehiveInfoPage.cs" />
+    <Compile Include="GetBeehivesContentPage.cs" />
+    <Compile Include="GetBeehivesFromComparing.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Page3.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartPage.cs" />
+    <Compile Include="TableCompareBeehives.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -91,6 +99,36 @@
       <Project>{D7B65A24-05F5-406F-A4EA-3E8A923DEE65}</Project>
       <Name>My Bees Diary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\icons-MyBeesDiary\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\icons-MyBeesDiary\apiary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\icons-MyBeesDiary\beehive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\icons-MyBeesDiary\compare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\icons-MyBeesDiary\helpfulinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\icons-MyBeesDiary\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\icons-MyBeesDiary\notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\icons-MyBeesDiary\production.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\icons-MyBeesDiary\scoreboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\icons-MyBeesDiary\statistics.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
