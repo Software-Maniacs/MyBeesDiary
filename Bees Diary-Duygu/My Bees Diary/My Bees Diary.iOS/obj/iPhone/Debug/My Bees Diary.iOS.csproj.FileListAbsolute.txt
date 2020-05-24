@@ -1,0 +1,8 @@
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.iOS\obj\iPhone\Debug\optimized\
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.iOS\obj\iPhone\Debug\My Bees Diary.iOS.csprojAssemblyReference.cache
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.iOS\obj\iPhone\Debug\My Bees Diary.iOS.csproj.CoreCompileInputs.cache
