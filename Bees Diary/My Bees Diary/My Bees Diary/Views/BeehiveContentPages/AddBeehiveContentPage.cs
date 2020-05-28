@@ -20,20 +20,20 @@ namespace My_Bees_Diary.Views
         private Entry _name;
         private Entry _number;
         private Entry _stores;
-        //private Picker _apiary;
+        private Picker _apiary;
         private Picker _typeOfBeehive;
         private Picker _typeOfBee;
         private Entry _production;
-        private Label _power;
-        private Slider _powerSlider;
         private Entry _feedings;
         private Entry _reviews;
         private Entry _treatments;
         private Button _add;
         private Button _exit;
+        private Apiary apiary;
         public AddBeehiveContentPage(string dbPath)
         {
             db = new SQLiteConnection(dbPath);
+            apiary = new Apiary();
             StackLayout stackLayout = new StackLayout();
 
             _name = new Entry
@@ -57,21 +57,10 @@ namespace My_Bees_Diary.Views
             };
             stackLayout.Children.Add(_stores);
 
-            /*_apiary = new Picker();
+            _apiary = new Picker();
             _apiary.Title = "Пчелин";
-            _apiary.ItemsSource = new List<string>
-                (
-                new string[]
-                {
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                }
-                );
-            //_apiary.ItemsSource = db.Table<Apiary>().OrderBy(a => a.Name).ToList();
-            stackLayout.Children.Add(_apiary);*/
+            _apiary.ItemsSource = db.Table<Apiary>().OrderBy(a => a.ID).ToList();
+            stackLayout.Children.Add(_apiary);
 
             _typeOfBeehive = new Picker();
             _typeOfBeehive.Title = "Тип кошер";
@@ -111,19 +100,108 @@ namespace My_Bees_Diary.Views
             _production.Keyboard = Keyboard.Text;
             stackLayout.Children.Add(_production);
 
-            _power = new Label();
-            _power.Text = "Сила";
-            stackLayout.Children.Add(_power);
-
-            _powerSlider = new Slider();
-            _powerSlider.Minimum = 0;
-            _powerSlider.Maximum = 100;
-            _powerSlider.IsVisible = true;
-            _powerSlider.ValueChanged += (sender, args) =>
+            _feedings = new Entry()
             {
-                _power.Text = _powerSlider.Value.ToString();
+                Placeholder = "Хранения",
+                Keyboard = Keyboard.Text
             };
-            stackLayout.Children.Add(_powerSlider);
+            stackLayout.Children.Add(_feedings);
+
+            _reviews = new Entry()
+            {
+                Placeholder = "Прегледи",
+                Keyboard = Keyboard.Text
+            };
+            stackLayout.Children.Add(_reviews);
+
+            _treatments = new Entry()
+            {
+                Placeholder = "Третирания",
+                Keyboard = Keyboard.Text
+            };
+            stackLayout.Children.Add(_treatments);
+
+            _add = new Button();
+            _add.Text = "Добави кошер";
+            _add.Clicked += Add;
+            stackLayout.Children.Add(_add);
+
+            _exit = new Button()
+            {
+                Text = "Назад",
+            };
+            _exit.Clicked += Exit;
+            stackLayout.Children.Add(_exit);
+
+            ScrollView scrollView = new ScrollView();
+            scrollView.Content = stackLayout;
+            Content = scrollView;
+        }
+
+        public AddBeehiveContentPage(string dbPath, Apiary apiary)
+        {
+            db = new SQLiteConnection(dbPath);
+            this.apiary = apiary;
+            StackLayout stackLayout = new StackLayout();
+
+            _name = new Entry
+            {
+                Placeholder = "Име на кошер",
+                Keyboard = Keyboard.Text
+            };
+            stackLayout.Children.Add(_name);
+
+            _number = new Entry()
+            {
+                Placeholder = "Номер на кошер",
+                Keyboard = Keyboard.Text
+            };
+            stackLayout.Children.Add(_number);
+
+            _stores = new Entry()
+            {
+                Placeholder = "Магазини",
+                Keyboard = Keyboard.Text
+            };
+            stackLayout.Children.Add(_stores);
+
+            _typeOfBeehive = new Picker();
+            _typeOfBeehive.Title = "Тип кошер";
+            _typeOfBeehive.ItemsSource = new List<string>
+                (
+                new string[]
+                {
+                    "Лангстрот-Рут",
+                    "Лангстрот-Рут(8-рамков)",
+                    "Тръвна",
+                    "Алпийски кошер Роже Делон",
+                    "Лежак",
+                    "Фарар",
+                    "Многокорпусен кошер",
+                    "Дадан-Блат",
+                    "За отглеждане на майка"
+                    }
+                );
+            stackLayout.Children.Add(_typeOfBeehive);
+
+            _typeOfBee = new Picker();
+            _typeOfBee.Title = "Тип пчели";
+            _typeOfBee.ItemsSource = new List<string>
+                (
+                new string[]
+                {
+                    "Пчелно семейство",
+                    "Рояк",
+                    "Кошер",
+                    "Отводка"
+                }
+                );
+            stackLayout.Children.Add(_typeOfBee);
+
+            _production = new Entry();
+            _production.Placeholder = "Продукция";
+            _production.Keyboard = Keyboard.Text;
+            stackLayout.Children.Add(_production);
 
             _feedings = new Entry()
             {
@@ -153,11 +231,14 @@ namespace My_Bees_Diary.Views
 
             _exit = new Button()
             {
-                Text = "Назад"
+                Text = "Назад",
             };
             _exit.Clicked += Exit;
+            stackLayout.Children.Add(_exit);
 
-            Content = stackLayout;
+            ScrollView scrollView = new ScrollView();
+            scrollView.Content = stackLayout;
+            Content = scrollView;
         }
 
         private async void Exit(object sender, EventArgs e)
@@ -190,13 +271,21 @@ namespace My_Bees_Diary.Views
                 TypeBeehive = _typeOfBeehive.SelectedItem.ToString(),
                 TypeBees = _typeOfBee.SelectedItem.ToString(),
                 Production = decimal.Parse(_production.Text),
-                Power = decimal.Parse(_power.Text),
                 Feedings = int.Parse(_feedings.Text),
                 Reviews = int.Parse(_reviews.Text),
-                Treatments = int.Parse(_treatments.Text),
-                ApiaryID = 1
+                Treatments = int.Parse(_treatments.Text)
             };
+
+            if (!_apiary.SelectedItem.Equals(null))
+            {
+                Apiary apiary = db.Query<Apiary>("select * from Apiary where id = " +
+                               int.Parse(_apiary.SelectedItem.ToString().Split().ToArray()[0])).First();
+            }
+            apiary.Beehives.Add(beehive);
+            beehive.Apiary = apiary;
+
             db.Insert(beehive);
+            db.Update(apiary);
             await DisplayAlert(null, "Кошер " + _name.Text + " се добави в пчелинa.", "OK");
             await Navigation.PopAsync();
         }

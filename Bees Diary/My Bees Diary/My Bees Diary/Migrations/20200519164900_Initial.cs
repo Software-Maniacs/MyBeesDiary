@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using My_Bees_Diary.Models.Entities;
 
 namespace MyBeesDiary.Migrations
 {
@@ -16,7 +17,8 @@ namespace MyBeesDiary.Migrations
                     Type = table.Column<string>(nullable: true),
                     Power = table.Column<int>(nullable: false),
                     Production = table.Column<int>(nullable: false),
-                    Location = table.Column<string>(nullable: true)
+                    Location = table.Column<string>(nullable: true),
+                    AreaPlants = table.Column<AreaPlants>(nullable: true)
                 },
                 constraints: table =>
                 {

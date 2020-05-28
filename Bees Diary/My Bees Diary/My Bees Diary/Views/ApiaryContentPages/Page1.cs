@@ -12,12 +12,12 @@ namespace My_Bees_Diary.Views
 	public class Page1 : ContentPage
     {
         private SQLiteConnection db;
-        private string _dbPath;
-        private ListView apiaryListView;
+        //private string _dbPath;
+        //private ListView apiaryListView;
         public Page1(string dbPath)
         {
             db = new SQLiteConnection(dbPath);
-            _dbPath = dbPath;
+            /*_dbPath = dbPath;
 
             apiaryListView = new ListView()
             {
@@ -36,15 +36,44 @@ namespace My_Bees_Diary.Views
             }
             };
             apiaryListView.ItemSelected += OnItemSelected;
-            apiaryListView.IsPullToRefreshEnabled = true;
+            apiaryListView.IsPullToRefreshEnabled = true;*/
 
+            db.CreateTable<Apiary>();
+
+            StackLayout stackLayout = new StackLayout();
+
+            Button add = new Button()
+            {
+                Text = "Add"
+            };
+            add.Clicked += Add;
+            stackLayout.Children.Add(add);
+
+            Button get = new Button()
+            {
+                Text = "Get"
+            };
+            get.Clicked += Get;
+            stackLayout.Children.Add(get);
+
+            Content = stackLayout;
         }
 
-        private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void Add(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddApiaryPage(db.DatabasePath));
+        }
+
+        private async void Get(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ApiariesListView(db.DatabasePath));
+        }
+
+        /*private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
 
-        }
-        
-        
+        }*/
+
+
     }
 }

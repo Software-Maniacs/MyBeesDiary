@@ -31,7 +31,18 @@ namespace My_Bees_Diary.Models.Entities
         public int Reviews { get; set; }
         public int Treatments { get; set; }
         [ForeignKey(typeof(Apiary))]
-        public int ApiaryID { get; set; }
+        public int ApiaryID
+        {
+            get
+            {
+                return this.Apiary.ID;
+            }
+            private set
+            {
+
+            }
+        }
+
         [ManyToOne]
         public virtual Apiary Apiary { get; set; }
 

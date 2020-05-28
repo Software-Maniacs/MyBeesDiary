@@ -15,7 +15,6 @@ namespace My_Bees_Diary.Views
 	public class CompareTwoApiaries : ContentPage
 {
         private SQLiteConnection db;
-        private string _dbPath;
         private Picker firstApiaryPicker;
         private Picker secondApiaryPicker;
         private Button done;
@@ -24,7 +23,6 @@ namespace My_Bees_Diary.Views
         public CompareTwoApiaries(string dbPath)
         {
             db = new SQLiteConnection(dbPath);
-            _dbPath = dbPath;
 
             StackLayout stackLayout = new StackLayout();
 
@@ -68,7 +66,7 @@ namespace My_Bees_Diary.Views
                 var message = DisplayAlert("Грешка", "Избрали сте един и същ пчелин за сравнение!", "Назад");
                 if (message.Equals("Назад"))
                 {
-                    await Navigation.PushAsync(new CompareTwoApiaries(_dbPath));
+                    await Navigation.PushAsync(new CompareTwoApiaries(db.DatabasePath));
                 }
 
             }

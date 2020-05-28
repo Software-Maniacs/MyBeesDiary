@@ -11,17 +11,16 @@ namespace My_Bees_Diary.Views
 {
 	public class GetBeehivesContentPage : ContentPage
     {
-        StackLayout stackLayout;
         private SQLiteConnection db;
         private ListView _list;
         public GetBeehivesContentPage(string dbPath)
         {
             db = new SQLiteConnection(dbPath);
-            stackLayout = new StackLayout();
+            StackLayout stackLayout = new StackLayout();
 
             _list = new ListView()
             {
-                ItemsSource = db.Table<Beehive>().OrderBy(b => b.ApiaryID).ThenBy(b => b.ID).ToList()
+                ItemsSource = db.Table<Beehive>().OrderBy(b => b.ID).ToList()
             };
             _list.ItemSelected += GetInfo;
             stackLayout.Children.Add(_list);

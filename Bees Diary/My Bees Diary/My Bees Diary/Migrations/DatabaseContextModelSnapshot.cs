@@ -22,26 +22,20 @@ namespace MyBeesDiary.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Location")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Power")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Number")
+                        .HasColumnType("TEXT");
 
-                    b.Property<int>("Production")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Feedings")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Reviews")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Treatments")
-                        .HasColumnType("INTEGER");
+                    b.Property<decimal>("Production")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Type")
                         .HasColumnType("TEXT");
@@ -53,45 +47,52 @@ namespace MyBeesDiary.Migrations
 
             modelBuilder.Entity("My_Bees_Diary.Models.Entities.AreaPlants", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("PlantsID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ApiaryID")
+                    b.Property<int>("ApiaryID")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Title")
-                        .HasColumnType("TEXT");
+                    b.HasKey("PlantsID");
 
-                    b.HasKey("ID");
-
-                    b.HasIndex("ApiaryID");
+                    b.HasIndex("ApiaryID")
+                        .IsUnique();
 
                     b.ToTable("AreaPlants");
                 });
 
             modelBuilder.Entity("My_Bees_Diary.Models.Entities.Beehive", b =>
                 {
-                    b.Property<string>("ID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("ApiaryID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Feedings")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Number")
-                        .HasColumnType("Text");
+                        .HasColumnType("TEXT");
 
                     b.Property<decimal>("Power")
-                        .HasColumnType("DECIMAL");
+                        .HasColumnType("TEXT");
 
                     b.Property<decimal>("Production")
-                        .HasColumnType("DECIMAL");
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Reviews")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Stores")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Treatments")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("TypeBeehive")
@@ -100,15 +101,6 @@ namespace MyBeesDiary.Migrations
                     b.Property<string>("TypeBees")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Feedings")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Reviews")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Treatments")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("ID");
 
                     b.HasIndex("ApiaryID");
@@ -116,11 +108,21 @@ namespace MyBeesDiary.Migrations
                     b.ToTable("Beehives");
                 });
 
+            modelBuilder.Entity("My_Bees_Diary.Models.Entities.Plant", b =>
+                {
+                    b.Property<string>("PlantName")
+                        .HasColumnType("TEXT");
+
+                    b.ToTable("Plant");
+                });
+
             modelBuilder.Entity("My_Bees_Diary.Models.Entities.AreaPlants", b =>
                 {
-                    b.HasOne("My_Bees_Diary.Models.Entities.Apiary", null)
-                        .WithMany("PlantsInArea")
-                        .HasForeignKey("ApiaryID");
+                    b.HasOne("My_Bees_Diary.Models.Entities.Apiary", "Apiary")
+                        .WithOne("PlantsInArea")
+                        .HasForeignKey("My_Bees_Diary.Models.Entities.AreaPlants", "ApiaryID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("My_Bees_Diary.Models.Entities.Beehive", b =>

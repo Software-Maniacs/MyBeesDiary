@@ -13,11 +13,9 @@ namespace My_Bees_Diary.Views
 	public class AddApiaryPage : ContentPage
 {
         private SQLiteConnection db;
-        private string _dbPath;
         private Entry apiaryName;
         private Entry apiaryNumber;
         private Picker apiaryType;
-        //power
         private Entry apiaryProduction;
         private Entry apiaryLocation;
         private CheckBox checkBox1;
@@ -38,15 +36,15 @@ namespace My_Bees_Diary.Views
         private Label label8;
         private CheckBox checkBox9;
         private Label label9;
-        private List<string> plantsInArea;
-        private ICollection<AreaPlants> areaPlants;
+        private List<Plant> plantsInArea;
         private Button add;
         private Button exit;
 
         public AddApiaryPage(string dbPath)
     {
             db = new SQLiteConnection(dbPath);
-            _dbPath = dbPath;
+            plantsInArea = new List<Plant>();
+
             StackLayout stackLayout = new StackLayout();
 
             apiaryName=new Entry
@@ -101,30 +99,7 @@ namespace My_Bees_Diary.Views
 
             if (checkBox1.IsChecked)
             {
-                plantsInArea.Add(label1.Text);
-                db.CreateTable<AreaPlants>();
-                AreaPlants lastPlant = db.Table<AreaPlants>().FirstOrDefault();
-                int id;
-
-                if (lastPlant == null)
-                {
-                    id = 1;
-                }
-                else
-                {
-                    id = lastPlant.PlantsID++;
-
-                }
-
-                AreaPlants plants = new AreaPlants()
-                {
-                    PlantsID = id,
-                    PlantsList = plantsInArea
-                };
-
-                areaPlants.Add(plants);
-
-
+                plantsInArea.Add(new Plant(label1.Text));
             }
             stackLayout.Children.Add(checkBox1);
             stackLayout.Children.Add(label1);
@@ -133,28 +108,7 @@ namespace My_Bees_Diary.Views
             label2 = new Label { Text = "Бяла акация" };
             if (checkBox2.IsChecked)
             {
-                plantsInArea.Add(label1.Text);
-                db.CreateTable<AreaPlants>();
-                AreaPlants lastPlant = db.Table<AreaPlants>().FirstOrDefault();
-                int id;
-
-                if (lastPlant == null)
-                {
-                    id = 1;
-                }
-                else
-                {
-                    id = lastPlant.PlantsID++;
-
-                }
-
-                AreaPlants plants = new AreaPlants()
-                {
-                    PlantsID = id,
-                    PlantsList = plantsInArea
-                };
-
-                areaPlants.Add(plants);
+                plantsInArea.Add(new Plant(label2.Text));
             }
             stackLayout.Children.Add(checkBox2);
             stackLayout.Children.Add(label2);
@@ -163,30 +117,7 @@ namespace My_Bees_Diary.Views
             label3 = new Label { Text = "Бяла комуна" };
             if (checkBox3.IsChecked)
             {
-                plantsInArea.Add(label1.Text);
-                db.CreateTable<AreaPlants>();
-                AreaPlants lastPlant = db.Table<AreaPlants>().FirstOrDefault();
-                int id;
-
-                if (lastPlant == null)
-                {
-                    id = 1;
-                }
-                else
-                {
-                    id = lastPlant.PlantsID++;
-
-                }
-
-                AreaPlants plants = new AreaPlants()
-                {
-                    PlantsID = id,
-                    PlantsList = plantsInArea
-                };
-
-                areaPlants.Add(plants);
-
-
+                plantsInArea.Add(new Plant(label3.Text));
             }
             stackLayout.Children.Add(checkBox3);
             stackLayout.Children.Add(label3);
@@ -195,30 +126,7 @@ namespace My_Bees_Diary.Views
             label4 = new Label { Text = "Липа" };
             if (checkBox4.IsChecked)
             {
-                plantsInArea.Add(label1.Text);
-                db.CreateTable<AreaPlants>();
-                AreaPlants lastPlant = db.Table<AreaPlants>().FirstOrDefault();
-                int id;
-
-                if (lastPlant == null)
-                {
-                    id = 1;
-                }
-                else
-                {
-                    id = lastPlant.PlantsID++;
-
-                }
-
-                AreaPlants plants = new AreaPlants()
-                {
-                    PlantsID = id,
-                    PlantsList = plantsInArea
-                };
-
-                areaPlants.Add(plants);
-
-
+                plantsInArea.Add(new Plant(label4.Text));
             }
             stackLayout.Children.Add(checkBox4);
             stackLayout.Children.Add(label4);
@@ -227,30 +135,7 @@ namespace My_Bees_Diary.Views
             label5 = new Label { Text = "Рапица" };
             if (checkBox5.IsChecked)
             {
-                plantsInArea.Add(label1.Text);
-                db.CreateTable<AreaPlants>();
-                AreaPlants lastPlant = db.Table<AreaPlants>().FirstOrDefault();
-                int id;
-
-                if (lastPlant == null)
-                {
-                    id = 1;
-                }
-                else
-                {
-                    id = lastPlant.PlantsID++;
-
-                }
-
-                AreaPlants plants = new AreaPlants()
-                {
-                    PlantsID = id,
-                    PlantsList = plantsInArea
-                };
-
-                areaPlants.Add(plants);
-
-
+                plantsInArea.Add(new Plant(label5.Text));
             }
             stackLayout.Children.Add(checkBox5);
             stackLayout.Children.Add(label5);
@@ -259,30 +144,7 @@ namespace My_Bees_Diary.Views
             label6 = new Label { Text = "Слънчоглед" };
             if (checkBox6.IsChecked)
             {
-                plantsInArea.Add(label1.Text);
-                db.CreateTable<AreaPlants>();
-                AreaPlants lastPlant = db.Table<AreaPlants>().FirstOrDefault();
-                int id;
-
-                if (lastPlant == null)
-                {
-                    id = 1;
-                }
-                else
-                {
-                    id = lastPlant.PlantsID++;
-
-                }
-
-                AreaPlants plants = new AreaPlants()
-                {
-                    PlantsID = id,
-                    PlantsList = plantsInArea
-                };
-
-                areaPlants.Add(plants);
-
-
+                plantsInArea.Add(new Plant(label6.Text));
             }
             stackLayout.Children.Add(checkBox6);
             stackLayout.Children.Add(label6);
@@ -291,30 +153,7 @@ namespace My_Bees_Diary.Views
             label7 = new Label { Text = "Магарешки бодил" };
             if (checkBox7.IsChecked)
             {
-                plantsInArea.Add(label1.Text);
-                db.CreateTable<AreaPlants>();
-                AreaPlants lastPlant = db.Table<AreaPlants>().FirstOrDefault();
-                int id;
-
-                if (lastPlant == null)
-                {
-                    id = 1;
-                }
-                else
-                {
-                    id = lastPlant.PlantsID++;
-
-                }
-
-                AreaPlants plants = new AreaPlants()
-                {
-                    PlantsID = id,
-                    PlantsList = plantsInArea
-                };
-
-                areaPlants.Add(plants);
-
-
+                plantsInArea.Add(new Plant(label7.Text));
             }
             stackLayout.Children.Add(checkBox7);
             stackLayout.Children.Add(label7);
@@ -323,30 +162,7 @@ namespace My_Bees_Diary.Views
             label8 = new Label { Text = "Овощни дръвчета" };
             if (checkBox8.IsChecked)
             {
-                plantsInArea.Add(label1.Text);
-                db.CreateTable<AreaPlants>();
-                AreaPlants lastPlant = db.Table<AreaPlants>().FirstOrDefault();
-                int id;
-
-                if (lastPlant == null)
-                {
-                    id = 1;
-                }
-                else
-                {
-                    id = lastPlant.PlantsID++;
-
-                }
-
-                AreaPlants plants = new AreaPlants()
-                {
-                    PlantsID = id,
-                    PlantsList = plantsInArea
-                };
-
-                areaPlants.Add(plants);
-
-
+                plantsInArea.Add(new Plant(label8.Text));
             }
             stackLayout.Children.Add(checkBox8);
             stackLayout.Children.Add(label8);
@@ -355,30 +171,7 @@ namespace My_Bees_Diary.Views
             label9 = new Label { Text = "Билки" };
             if (checkBox9.IsChecked)
             {
-                plantsInArea.Add(label1.Text);
-                db.CreateTable<AreaPlants>();
-                AreaPlants lastPlant = db.Table<AreaPlants>().FirstOrDefault();
-                int id;
-
-                if (lastPlant == null)
-                {
-                    id = 1;
-                }
-                else
-                {
-                    id = lastPlant.PlantsID++;
-
-                }
-
-                AreaPlants plants = new AreaPlants()
-                {
-                    PlantsID = id,
-                    PlantsList = plantsInArea
-                };
-
-                areaPlants.Add(plants);
-
-
+                plantsInArea.Add(new Plant(label9.Text));
             }
             stackLayout.Children.Add(checkBox9);
             stackLayout.Children.Add(label9);
@@ -397,10 +190,10 @@ namespace My_Bees_Diary.Views
             scrollView.Content = stackLayout;
             Content = scrollView;
         }
-        
+
         private async void ExitPage(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ApiariesListView(_dbPath));
+            await Navigation.PushAsync(new ApiariesListView(db.DatabasePath));
         }
 
         private async void AddApiary(object sender, EventArgs e)
@@ -410,25 +203,26 @@ namespace My_Bees_Diary.Views
             Apiary lastApiary = db.Table<Apiary>().OrderByDescending(a => a.Date).FirstOrDefault();
             int id;
 
-            if (lastApiary==null)
+            if (lastApiary == null)
             {
                 id = 1;
             }
             else
             {
                 id = lastApiary.ID++;
-
             }
 
             Apiary apiary = new Apiary()
             {
                 ID = id,
                 Name = apiaryName.Text,
-                Number=apiaryNumber.Text,
+                Number = apiaryNumber.Text,
                 Type = apiaryType.SelectedItem.ToString(),
                 Production = decimal.Parse(apiaryProduction.Text),
                 Location = apiaryLocation.Text,
-                PlantsInArea=areaPlants
+                PlantsInArea = new AreaPlants(id, plantsInArea),
+                Beehives = new List<Beehive>(),
+                Date = DateTime.Now
             };
 
             db.Insert(apiary);

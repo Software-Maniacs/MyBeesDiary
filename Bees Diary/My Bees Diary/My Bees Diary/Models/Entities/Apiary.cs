@@ -9,11 +9,12 @@ namespace My_Bees_Diary.Models.Entities
     public class Apiary
     {
         private decimal production;
-        private int power = 0;
+        private int power;
         public Apiary()
         {
-            //this.Beehives = new HashSet<Beehive>();
-            this.PlantsInArea = new List<AreaPlants>();
+            this.Beehives = new List<Beehive>();
+            this.PlantsInArea = new AreaPlants();
+            this.power = 0;
         }
         
         [PrimaryKey, AutoIncrement]
@@ -37,14 +38,18 @@ namespace My_Bees_Diary.Models.Entities
         }
         public string Location { get; set; }
         [OneToMany]
-       // public virtual ICollection<Beehive> Beehives { get; set; }
-        public virtual ICollection<AreaPlants> PlantsInArea { get; set; }
+        public virtual ICollection<Beehive> Beehives { get; set; }
+        [OneToOne]
+        public AreaPlants PlantsInArea { get; set; }
+
+        /*public override string ToString()
+        {
+            return $" {Name} {Number} ({Type}) {Production} {power} {Location}";
+        }*/
 
         public override string ToString()
         {
-            return $" {Name} {Number} ({Type}) {Production} {power} {Location}";
+            return $"{ID} {Name} ({Number})";
         }
-        
-
     }
 }
