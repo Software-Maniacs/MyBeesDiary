@@ -50,5 +50,20 @@ namespace My_Bees_Diary.Models.Entities
         {
             return $"{ID} {Name} ({Number})";
         }
+        public override bool Equals(object obj)
+        {
+            if (obj is Beehive)
+            {
+                var that = obj as Beehive;
+                return this.ID == that.ID && this.Name == that.Name
+                    && this.Number == that.Number && this.Power == that.Power
+                && this.Production == that.Production && this.Reviews == that.Reviews
+                && this.Treatments == that.Treatments && this.TypeBeehive == that.TypeBeehive
+                && this.TypeBees == that.TypeBees && this.Feedings == that.Feedings &&
+                this.Apiary == that.Apiary && this.ApiaryID == that.ApiaryID;
+            }
+            return false;
+        }
+
     }
 }

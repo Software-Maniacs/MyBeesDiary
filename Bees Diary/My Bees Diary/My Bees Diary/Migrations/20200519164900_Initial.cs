@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using My_Bees_Diary.Models.Entities;
+using System;
 
 namespace MyBeesDiary.Migrations
 {
@@ -73,7 +74,23 @@ namespace MyBeesDiary.Migrations
                         principalColumn: "ID");
                 });
 
-            migrationBuilder.CreateIndex(
+
+            migrationBuilder.CreateTable(
+               name: "Notes",
+               columns: table => new
+               {
+                   ID = table.Column<int>(nullable: false)
+                       .Annotation("Sqlite:Autoincrement", true),
+                   Summary = table.Column<string>(nullable: true),
+                   Description = table.Column<string>(nullable: true),
+                   Date = table.Column<DateTime>(nullable: true),
+               },
+               constraints: table =>
+               {
+                   table.PrimaryKey("PK_Notes", x => x.ID);
+               });
+
+        migrationBuilder.CreateIndex(
                 name: "IX_AreaPlants_ApiaryID",
                 table: "AreaPlants",
                 column: "ApiaryID");
@@ -94,6 +111,9 @@ namespace MyBeesDiary.Migrations
 
             migrationBuilder.DropTable(
                 name: "Apiaries");
+
+            migrationBuilder.DropTable(
+                name: "Notes");
         }
     }
 }

@@ -16,14 +16,9 @@ namespace My_Bees_Diary.Models.Entities
 {
         public AreaPlants()
         {
-            this.PlantsList = new List<Plant>();
+
         }
 
-        public AreaPlants(int areaPlantsID, List<Plant> plantsList)
-        {
-            this.PlantsID = areaPlantsID;
-            this.PlantsList = plantsList;
-        }
 
         [Key, AutoIncrement]
         public int PlantsID { get; set; }

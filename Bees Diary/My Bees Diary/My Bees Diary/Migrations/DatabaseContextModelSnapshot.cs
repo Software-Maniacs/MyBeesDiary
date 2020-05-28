@@ -108,6 +108,27 @@ namespace MyBeesDiary.Migrations
                     b.ToTable("Beehives");
                 });
 
+            modelBuilder.Entity("My_Bees_Diary.Models.Entities.Notes", b =>
+            {
+                b.Property<int>("ID")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("INTEGER");
+
+                b.Property<string>("Summary")
+                    .HasColumnType("TEXT");
+
+                b.Property<string>("Description")
+                    .HasColumnType("TEXT");
+
+                b.Property<DateTime>("Date")
+                    .HasColumnType("DATETIME");
+
+                b.HasKey("ID");
+
+                b.ToTable("Notes");
+            });
+
+
             modelBuilder.Entity("My_Bees_Diary.Models.Entities.Plant", b =>
                 {
                     b.Property<string>("PlantName")

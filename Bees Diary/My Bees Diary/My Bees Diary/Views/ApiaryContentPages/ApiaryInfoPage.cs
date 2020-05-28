@@ -50,18 +50,18 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             apiaryName = new Entry
             {
-                Text = apiary.Name
+                Text = _apiary.Name
             };
             stackLayout.Children.Add(apiaryName);
 
             apiaryNumber = new Entry
             {
-                Text = apiary.Number
+                Text = _apiary.Number
             };
             stackLayout.Children.Add(apiaryNumber);
 
             apiaryType = new Picker();
-            apiaryType.Title = apiary.Type;
+            apiaryType.Title = _apiary.Type;
             apiaryType.ItemsSource = new List<string>
                 (
                 new string[]
@@ -78,20 +78,21 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             apiaryProduction = new Entry
             {
-                Text = apiary.Production.ToString()
+                Text = _apiary.Production.ToString()
             };
             stackLayout.Children.Add(apiaryProduction);
 
             apiaryLocation = new Entry
             {
-                Text = apiary.Location
+                Text = _apiary.Location
             };
             stackLayout.Children.Add(apiaryLocation);
 
             checkBox1 = new CheckBox();
             label1 = new Label { Text = "Маргарит" };
 
-            if (apiary.PlantsInArea.Contain("Маргарит"))
+            //тук излиза NullException, защото нямаме такава колона PlantsInArea във Apiary таблицата.
+            if (_apiary.PlantsInArea.Contain("Маргарит"))
             {
                 checkBox1.IsChecked = true;
             }
@@ -100,7 +101,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox2 = new CheckBox();
             label2 = new Label { Text = "Бяла акация" };
-            if (apiary.PlantsInArea.Contain("Бяла акация"))
+            if (_apiary.PlantsInArea.Contain("Бяла акация"))
             {
                 checkBox2.IsChecked = true;
             }
@@ -109,7 +110,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox3 = new CheckBox();
             label3 = new Label { Text = "Бяла комуна" };
-            if (apiary.PlantsInArea.Contain("Бяла комуна"))
+            if (_apiary.PlantsInArea.Contain("Бяла комуна"))
             {
                 checkBox3.IsChecked = true;
             }
@@ -118,7 +119,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox4 = new CheckBox();
             label4 = new Label { Text = "Липа" };
-            if (apiary.PlantsInArea.Contain("Липа"))
+            if (_apiary.PlantsInArea.Contain("Липа"))
             {
                 checkBox4.IsChecked = true;
             }
@@ -127,7 +128,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox5 = new CheckBox();
             label5 = new Label { Text = "Рапица" };
-            if (apiary.PlantsInArea.Contain("Рапица"))
+            if (_apiary.PlantsInArea.Contain("Рапица"))
             {
                 checkBox5.IsChecked = true;
             }
@@ -136,7 +137,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox6 = new CheckBox();
             label6 = new Label { Text = "Слънчоглед" };
-            if (apiary.PlantsInArea.Contain("Слънчоглед"))
+            if (_apiary.PlantsInArea.Contain("Слънчоглед"))
             {
                 checkBox6.IsChecked = true;
             }
@@ -145,7 +146,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox7 = new CheckBox();
             label7 = new Label { Text = "Магарешки бодил" };
-            if (apiary.PlantsInArea.Contain("Магарешки бодил"))
+            if (_apiary.PlantsInArea.Contain("Магарешки бодил"))
             {
                 checkBox7.IsChecked = true;
             }
@@ -154,7 +155,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox8 = new CheckBox();
             label8 = new Label { Text = "Овощни дръвчета" };
-            if (apiary.PlantsInArea.Contain("Овощни дръвчета"))
+            if (_apiary.PlantsInArea.Contain("Овощни дръвчета"))
             {
                 checkBox8.IsChecked = true;
             }
@@ -163,7 +164,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox9 = new CheckBox();
             label9 = new Label { Text = "Билки" };
-            if (apiary.PlantsInArea.Contain("Билки"))
+            if (_apiary.PlantsInArea.Contain("Билки"))
             {
                 checkBox9.IsChecked = true;
             }

@@ -1,4 +1,5 @@
-﻿using My_Bees_Diary.Models.Entities;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using My_Bees_Diary.Models.Entities;
 //using Resources.Controls;
 using SQLite;
 using System;
@@ -39,6 +40,7 @@ namespace My_Bees_Diary.Views
         private List<Plant> plantsInArea;
         private Button add;
         private Button exit;
+        private Dictionary<CheckBox, Label> checkBoxes;
 
         public AddApiaryPage(string dbPath)
     {
@@ -96,83 +98,47 @@ namespace My_Bees_Diary.Views
 
             checkBox1 = new CheckBox();
             label1 = new Label { Text="Маргарит" };
-
-            if (checkBox1.IsChecked)
-            {
-                plantsInArea.Add(new Plant(label1.Text));
-            }
             stackLayout.Children.Add(checkBox1);
             stackLayout.Children.Add(label1);
 
             checkBox2 = new CheckBox();
             label2 = new Label { Text = "Бяла акация" };
-            if (checkBox2.IsChecked)
-            {
-                plantsInArea.Add(new Plant(label2.Text));
-            }
             stackLayout.Children.Add(checkBox2);
             stackLayout.Children.Add(label2);
 
             checkBox3 = new CheckBox();
             label3 = new Label { Text = "Бяла комуна" };
-            if (checkBox3.IsChecked)
-            {
-                plantsInArea.Add(new Plant(label3.Text));
-            }
             stackLayout.Children.Add(checkBox3);
             stackLayout.Children.Add(label3);
 
             checkBox4 = new CheckBox();
             label4 = new Label { Text = "Липа" };
-            if (checkBox4.IsChecked)
-            {
-                plantsInArea.Add(new Plant(label4.Text));
-            }
             stackLayout.Children.Add(checkBox4);
             stackLayout.Children.Add(label4);
-
+            
             checkBox5 = new CheckBox();
             label5 = new Label { Text = "Рапица" };
-            if (checkBox5.IsChecked)
-            {
-                plantsInArea.Add(new Plant(label5.Text));
-            }
             stackLayout.Children.Add(checkBox5);
             stackLayout.Children.Add(label5);
-
+            
             checkBox6 = new CheckBox();
             label6 = new Label { Text = "Слънчоглед" };
-            if (checkBox6.IsChecked)
-            {
-                plantsInArea.Add(new Plant(label6.Text));
-            }
             stackLayout.Children.Add(checkBox6);
             stackLayout.Children.Add(label6);
-
+            
             checkBox7 = new CheckBox();
             label7 = new Label { Text = "Магарешки бодил" };
-            if (checkBox7.IsChecked)
-            {
-                plantsInArea.Add(new Plant(label7.Text));
-            }
             stackLayout.Children.Add(checkBox7);
             stackLayout.Children.Add(label7);
 
+
             checkBox8 = new CheckBox();
             label8 = new Label { Text = "Овощни дръвчета" };
-            if (checkBox8.IsChecked)
-            {
-                plantsInArea.Add(new Plant(label8.Text));
-            }
             stackLayout.Children.Add(checkBox8);
             stackLayout.Children.Add(label8);
 
             checkBox9 = new CheckBox();
             label9 = new Label { Text = "Билки" };
-            if (checkBox9.IsChecked)
-            {
-                plantsInArea.Add(new Plant(label9.Text));
-            }
             stackLayout.Children.Add(checkBox9);
             stackLayout.Children.Add(label9);
 
@@ -198,6 +164,19 @@ namespace My_Bees_Diary.Views
 
         private async void AddApiary(object sender, EventArgs e)
         {
+            //Добавяме checkBox-овете и съответните им label-и в един Dictionary, 
+            //за да можем да проверим всеки checkbox дали е маркиран и, ако е, да
+            //добавим името на цветето, написано отгоре, във PlantsInArea.
+            checkBoxes = new Dictionary<CheckBox, Label>();
+            checkBoxes.Add(checkBox1, label1);
+            checkBoxes.Add(checkBox2, label2);
+            checkBoxes.Add(checkBox3, label3);
+            checkBoxes.Add(checkBox4, label4);
+            checkBoxes.Add(checkBox5, label5);
+            checkBoxes.Add(checkBox6, label6);
+            checkBoxes.Add(checkBox7, label7);
+            checkBoxes.Add(checkBox8, label8);
+            checkBoxes.Add(checkBox9, label9);
             db.CreateTable<Apiary>();
 
             Apiary lastApiary = db.Table<Apiary>().OrderByDescending(a => a.Date).FirstOrDefault();
@@ -212,6 +191,7 @@ namespace My_Bees_Diary.Views
                 id = lastApiary.ID++;
             }
 
+            AddCheckedPlantsToPlantsArea(checkBoxes);
             Apiary apiary = new Apiary()
             {
                 ID = id,
@@ -220,7 +200,11 @@ namespace My_Bees_Diary.Views
                 Type = apiaryType.SelectedItem.ToString(),
                 Production = decimal.Parse(apiaryProduction.Text),
                 Location = apiaryLocation.Text,
-                PlantsInArea = new AreaPlants(id, plantsInArea),
+                PlantsInArea = new AreaPlants
+                {
+                    PlantsID = id,
+                    PlantsList = plantsInArea
+                },
                 Beehives = new List<Beehive>(),
                 Date = DateTime.Now
             };
@@ -228,6 +212,24 @@ namespace My_Bees_Diary.Views
             db.Insert(apiary);
             await DisplayAlert(null, "Пчелин " + apiaryNumber.Text + " е успешно добавен.", "ОК");
             await Navigation.PopAsync();
+        }
+
+        private void AddPlantInPlantsArea(string plantName)
+        {
+            plantsInArea.Add(new Plant
+            {
+                PlantName = plantName
+            });
+        }
+        private void AddCheckedPlantsToPlantsArea(Dictionary<CheckBox, Label> checkBoxes)
+        {
+           foreach(var checkBox in checkBoxes)
+            {
+                if (checkBox.Key.IsChecked)
+                {
+                    AddPlantInPlantsArea(checkBox.Value.Text);
+                }
+            }
         }
     }
 }

@@ -97,7 +97,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icons-MyBeesDiary\add.png" />
+    <AndroidResource Include="Resources\drawable\add.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icons-MyBeesDiary\apiary.png" />
@@ -115,7 +115,7 @@
     <AndroidResource Include="Resources\drawable\icons-MyBeesDiary\location.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icons-MyBeesDiary\notes.png" />
+    <AndroidResource Include="Resources\drawable\notes.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icons-MyBeesDiary\production.png" />

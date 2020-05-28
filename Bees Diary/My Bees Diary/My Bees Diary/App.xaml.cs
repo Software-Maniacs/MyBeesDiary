@@ -5,6 +5,7 @@ using My_Bees_Diary.Services;
 using My_Bees_Diary.Views;
 using SQLite;
 using My_Bees_Diary.Models.Entities;
+using My_Bees_Diary.Views.NoteContentPages;
 
 namespace My_Bees_Diary
 {

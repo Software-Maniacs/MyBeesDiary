@@ -11,10 +11,6 @@ namespace My_Bees_Diary.Models.Entities
         {
 
         }
-        public Plant(string plantName)
-        {
-            this.PlantName = plantName;
-        }
 
         public string PlantName { get; set; }
     }

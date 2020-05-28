@@ -8,6 +8,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <DocumentationFile>C:\Users\maria12\Documents\GitHub\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\My Bees Diary.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,5 +27,17 @@
 
   <ItemGroup>
     <Folder Include="Views\BeehiveContentPages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\NoteContentPages\AddNotePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NoteContentPages\EditNotePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NoteContentPages\NotePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

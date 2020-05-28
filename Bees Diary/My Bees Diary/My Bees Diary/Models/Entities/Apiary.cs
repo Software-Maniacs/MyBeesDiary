@@ -2,6 +2,7 @@
 using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace My_Bees_Diary.Models.Entities
 {
@@ -12,9 +13,6 @@ namespace My_Bees_Diary.Models.Entities
         private int power;
         public Apiary()
         {
-            this.Beehives = new List<Beehive>();
-            this.PlantsInArea = new AreaPlants();
-            this.power = 0;
         }
         
         [PrimaryKey, AutoIncrement]
@@ -23,6 +21,7 @@ namespace My_Bees_Diary.Models.Entities
         public string Number { get; set; }
         public string Type { get; set; }
         public DateTime Date { get; set; }
+
 
         public decimal Production
         {
@@ -41,6 +40,21 @@ namespace My_Bees_Diary.Models.Entities
         public virtual ICollection<Beehive> Beehives { get; set; }
         [OneToOne]
         public AreaPlants PlantsInArea { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Apiary)
+            {
+                var that = obj as Apiary;
+                return this.ID == that.ID && this.Name == that.Name
+                    && this.Number == that.Number && this.Beehives == that.Beehives
+                    && this.Date == that.Date && this.Location == that.Location
+                && this.PlantsInArea == that.PlantsInArea && this.Production == that.Production
+                && this.Type == that.Type;
+            }
+            return false;
+        }
+
 
         /*public override string ToString()
         {
