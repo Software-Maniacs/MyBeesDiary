@@ -25,23 +25,32 @@ namespace My_Bees_Diary.Models.Entities
         public string TypeBeehive { get; set; }
         public string TypeBees { get; set; }
         public int Stores { get; set; }
-        public decimal Production { get; set; }
         public decimal Power { get; set; }
         public int Feedings { get; set; }
         public int Reviews { get; set; }
         public int Treatments { get; set; }
-        [ForeignKey(typeof(Apiary))]
-        public int ApiaryID
+
+        public decimal Production { get; set; }
+        /*public decimal Production
         {
             get
             {
-                return this.Apiary.ID;
+                return Honey + Wax + Propolis + Pollen + Royal + Jelly + Poison;
             }
             private set
             {
 
             }
         }
+        public decimal Honey { get; set; }
+        public decimal Wax { get; set; }
+        public decimal Propolis { get; set; }
+        public decimal Pollen { get; set; }
+        public decimal Royal { get; set; }
+        public decimal Jelly { get; set; }
+        public decimal Poison { get; set; }*/
+        [ForeignKey(typeof(Apiary))]
+        public int ApiaryID { get; set; }
 
         [ManyToOne]
         public virtual Apiary Apiary { get; set; }

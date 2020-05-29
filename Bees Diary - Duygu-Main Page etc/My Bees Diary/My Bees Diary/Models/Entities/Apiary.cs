@@ -21,20 +21,25 @@ namespace My_Bees_Diary.Models.Entities
         public string Number { get; set; }
         public string Type { get; set; }
         public DateTime Date { get; set; }
-
-
-        public decimal Production
+        /*public decimal Production 
         {
             get
             {
-                return production;
+                return Honey + Wax + Propolis + Pollen + Royal + Jelly + Poison;
             }
-            set
+            private set
             {
-                production += value;
-                this.power++;
+
             }
         }
+        public decimal Honey { get; set; }
+        public decimal Wax { get; set; }
+        public decimal Propolis { get; set; }
+        public decimal Pollen { get; set; }
+        public decimal Royal { get; set; }
+        public decimal Jelly { get; set; }
+        public decimal Poison { get; set; }*/
+        public decimal Production { get; set; }
         public string Location { get; set; }
         [OneToMany]
         public virtual ICollection<Beehive> Beehives { get; set; }

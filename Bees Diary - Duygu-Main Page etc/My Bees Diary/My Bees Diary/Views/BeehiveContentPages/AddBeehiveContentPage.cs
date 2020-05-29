@@ -33,7 +33,7 @@ namespace My_Bees_Diary.Views
         public AddBeehiveContentPage(string dbPath)
         {
             db = new SQLiteConnection(dbPath);
-            apiary = new Apiary();
+            apiary = null;
             StackLayout stackLayout = new StackLayout();
 
             _name = new Entry
@@ -270,22 +270,19 @@ namespace My_Bees_Diary.Views
                 Name = _name.Text,
                 TypeBeehive = _typeOfBeehive.SelectedItem.ToString(),
                 TypeBees = _typeOfBee.SelectedItem.ToString(),
-                Production = decimal.Parse(_production.Text),
                 Feedings = int.Parse(_feedings.Text),
                 Reviews = int.Parse(_reviews.Text),
                 Treatments = int.Parse(_treatments.Text)
             };
 
-            if (!_apiary.SelectedItem.Equals(null))
+            if (apiary == null)
             {
-                Apiary apiary = db.Query<Apiary>("select * from Apiary where id = " +
+                 apiary = db.Query<Apiary>("select * from Apiary where id = " +
                                int.Parse(_apiary.SelectedItem.ToString().Split().ToArray()[0])).First();
             }
-            apiary.Beehives.Add(beehive);
-            beehive.Apiary = apiary;
+            beehive.ApiaryID = apiary.ID;
 
             db.Insert(beehive);
-            db.Update(apiary);
             await DisplayAlert(null, "Кошер " + _name.Text + " се добави в пчелинa.", "OK");
             await Navigation.PopAsync();
         }

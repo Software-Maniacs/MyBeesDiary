@@ -43,7 +43,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
         private Apiary _apiary;
         private List<AreaPlants> _plantsInArea;
 
-        public ApiaryInfoPage(Apiary apiary, List<AreaPlants> plantsInArea,  string dbPath)
+        public ApiaryInfoPage(Apiary apiary, /*List<AreaPlants> plantsInArea,*/  string dbPath)
         {
             _apiary = apiary;
             _plantsInArea = apiary.PlantsInArea;
@@ -90,7 +90,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
             };
             stackLayout.Children.Add(apiaryLocation);
 
-            checkBox1 = new CheckBox();
+            /*checkBox1 = new CheckBox();
             label1 = new Label { Text = "Маргарит" };
 
             //тук излиза NullException, защото нямаме такава колона PlantsInArea във Apiary таблицата.
@@ -103,7 +103,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox2 = new CheckBox();
             label2 = new Label { Text = "Бяла акация" };
-            if (_apiary.PlantsInArea.Contain("Бяла акация"))
+            if (_apiary.PlantsInArea.Contains("Бяла акация"))
             {
                 checkBox2.IsChecked = true;
             }
@@ -112,7 +112,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox3 = new CheckBox();
             label3 = new Label { Text = "Бяла комуна" };
-            if (_apiary.PlantsInArea.Contain("Бяла комуна"))
+            if (_apiary.PlantsInArea.Contains("Бяла комуна"))
             {
                 checkBox3.IsChecked = true;
             }
@@ -121,7 +121,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox4 = new CheckBox();
             label4 = new Label { Text = "Липа" };
-            if (_apiary.PlantsInArea.Contain("Липа"))
+            if (_apiary.PlantsInArea.Contains("Липа"))
             {
                 checkBox4.IsChecked = true;
             }
@@ -130,7 +130,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox5 = new CheckBox();
             label5 = new Label { Text = "Рапица" };
-            if (_apiary.PlantsInArea.Contain("Рапица"))
+            if (_apiary.PlantsInArea.Contains("Рапица"))
             {
                 checkBox5.IsChecked = true;
             }
@@ -139,7 +139,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox6 = new CheckBox();
             label6 = new Label { Text = "Слънчоглед" };
-            if (_apiary.PlantsInArea.Contain("Слънчоглед"))
+            if (_apiary.PlantsInArea.Contains("Слънчоглед"))
             {
                 checkBox6.IsChecked = true;
             }
@@ -148,7 +148,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox7 = new CheckBox();
             label7 = new Label { Text = "Магарешки бодил" };
-            if (_apiary.PlantsInArea.Contain("Магарешки бодил"))
+            if (_apiary.PlantsInArea.Contains("Магарешки бодил"))
             {
                 checkBox7.IsChecked = true;
             }
@@ -157,7 +157,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox8 = new CheckBox();
             label8 = new Label { Text = "Овощни дръвчета" };
-            if (_apiary.PlantsInArea.Contain("Овощни дръвчета"))
+            if (_apiary.PlantsInArea.Contains("Овощни дръвчета"))
             {
                 checkBox8.IsChecked = true;
             }
@@ -166,12 +166,12 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             checkBox9 = new CheckBox();
             label9 = new Label { Text = "Билки" };
-            if (db.Query("select from PlantsInArea from Apiary")
+            /*if (db.Query("select from PlantsInArea from Apiary"))
             {
                 checkBox9.IsChecked = true;
             }
             stackLayout.Children.Add(checkBox9);
-            stackLayout.Children.Add(label9);
+            stackLayout.Children.Add(label9);*/
 
             update = new Button()
             {
@@ -227,7 +227,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
         private async void Delete(object sender, EventArgs e)
         {
-            db.Delete<Apiary>(_apiary);
+            db.Delete(_apiary);
 
             await DisplayAlert(null, "Пчелин " + apiaryName + "е изтрит.", "ОК");
             await Navigation.PushAsync(new ApiariesListView(db.DatabasePath));

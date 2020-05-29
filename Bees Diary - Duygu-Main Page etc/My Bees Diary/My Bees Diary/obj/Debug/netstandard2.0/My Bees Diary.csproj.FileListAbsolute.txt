@@ -111,3 +111,25 @@ C:\Users\Acer\Downloads\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\bin\D
 C:\Users\Acer\Downloads\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\bin\Debug\netstandard2.0\ref\My Bees Diary.dll
 C:\Users\Acer\Downloads\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\bin\Debug\netstandard2.0\My Bees Diary.pdb
 C:\Users\Acer\Downloads\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\Views\MenuPage.xaml.g.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\Views\NoteContentPages\AddNotePage.xaml.g.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\Views\NoteContentPages\EditNotePage.xaml.g.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\Views\NoteContentPages\NotePage.xaml.g.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.csproj.CoreCompileInputs.cache
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.AssemblyInfoInputs.cache
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.AssemblyInfo.cs
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.dll
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\ref\My Bees Diary.dll
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.pdb
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\bin\Debug\netstandard2.0\My Bees Diary.deps.json
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\bin\Debug\netstandard2.0\My Bees Diary.dll
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\bin\Debug\netstandard2.0\ref\My Bees Diary.dll
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\bin\Debug\netstandard2.0\My Bees Diary.pdb
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Laptop_HP\Desktop\MyBeesDiary\Bees Diary - Duygu-Main Page etc\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.csprojAssemblyReference.cache

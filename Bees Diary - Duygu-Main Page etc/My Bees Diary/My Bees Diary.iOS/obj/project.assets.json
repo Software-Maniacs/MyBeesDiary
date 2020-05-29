@@ -17,19 +17,19 @@
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
-          "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
       "Microsoft.Bcl.HashCode/1.1.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/Microsoft.Bcl.HashCode.dll": {}
+          "ref/netstandard2.1/Microsoft.Bcl.HashCode.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Bcl.HashCode.dll": {}
+          "lib/netstandard2.1/Microsoft.Bcl.HashCode.dll": {}
         }
       },
       "Microsoft.Data.Sqlite.Core/3.1.4": {
@@ -198,14 +198,13 @@
       "Microsoft.Extensions.DependencyInjection/3.1.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.4"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.4": {
@@ -427,11 +426,11 @@
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
-      "System.Memory/4.5.4": {
+      "System.Memory/4.5.3": {
         "type": "package",
         "dependencies": {
-          "System.Buffers": "4.5.1",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+          "System.Buffers": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "compile": {
           "lib/netstandard2.0/System.Memory.dll": {}
@@ -460,14 +459,11 @@
       },
       "System.Text.Encodings.Web/4.7.1": {
         "type": "package",
-        "dependencies": {
-          "System.Memory": "4.5.4"
-        },
         "compile": {
-          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+          "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+          "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
         }
       },
       "System.Text.Json/4.7.2": {
@@ -668,19 +664,19 @@
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
-          "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
       "Microsoft.Bcl.HashCode/1.1.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/Microsoft.Bcl.HashCode.dll": {}
+          "ref/netstandard2.1/Microsoft.Bcl.HashCode.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Bcl.HashCode.dll": {}
+          "lib/netstandard2.1/Microsoft.Bcl.HashCode.dll": {}
         }
       },
       "Microsoft.Data.Sqlite.Core/3.1.4": {
@@ -849,14 +845,13 @@
       "Microsoft.Extensions.DependencyInjection/3.1.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.4"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.4": {
@@ -1078,11 +1073,11 @@
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
-      "System.Memory/4.5.4": {
+      "System.Memory/4.5.3": {
         "type": "package",
         "dependencies": {
-          "System.Buffers": "4.5.1",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+          "System.Buffers": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "compile": {
           "lib/netstandard2.0/System.Memory.dll": {}
@@ -1111,14 +1106,11 @@
       },
       "System.Text.Encodings.Web/4.7.1": {
         "type": "package",
-        "dependencies": {
-          "System.Memory": "4.5.4"
-        },
         "compile": {
-          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+          "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+          "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
         }
       },
       "System.Text.Json/4.7.2": {
@@ -1319,19 +1311,19 @@
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
-          "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
       "Microsoft.Bcl.HashCode/1.1.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/Microsoft.Bcl.HashCode.dll": {}
+          "ref/netstandard2.1/Microsoft.Bcl.HashCode.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Bcl.HashCode.dll": {}
+          "lib/netstandard2.1/Microsoft.Bcl.HashCode.dll": {}
         }
       },
       "Microsoft.Data.Sqlite.Core/3.1.4": {
@@ -1500,14 +1492,13 @@
       "Microsoft.Extensions.DependencyInjection/3.1.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.4"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.4": {
@@ -1729,11 +1720,11 @@
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
-      "System.Memory/4.5.4": {
+      "System.Memory/4.5.3": {
         "type": "package",
         "dependencies": {
-          "System.Buffers": "4.5.1",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+          "System.Buffers": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "compile": {
           "lib/netstandard2.0/System.Memory.dll": {}
@@ -1762,14 +1753,11 @@
       },
       "System.Text.Encodings.Web/4.7.1": {
         "type": "package",
-        "dependencies": {
-          "System.Memory": "4.5.4"
-        },
         "compile": {
-          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+          "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+          "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
         }
       },
       "System.Text.Json/4.7.2": {
@@ -1970,19 +1958,19 @@
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
-          "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
       "Microsoft.Bcl.HashCode/1.1.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/Microsoft.Bcl.HashCode.dll": {}
+          "ref/netstandard2.1/Microsoft.Bcl.HashCode.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Bcl.HashCode.dll": {}
+          "lib/netstandard2.1/Microsoft.Bcl.HashCode.dll": {}
         }
       },
       "Microsoft.Data.Sqlite.Core/3.1.4": {
@@ -2151,14 +2139,13 @@
       "Microsoft.Extensions.DependencyInjection/3.1.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.4"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.4": {
@@ -2380,11 +2367,11 @@
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
-      "System.Memory/4.5.4": {
+      "System.Memory/4.5.3": {
         "type": "package",
         "dependencies": {
-          "System.Buffers": "4.5.1",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+          "System.Buffers": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "compile": {
           "lib/netstandard2.0/System.Memory.dll": {}
@@ -2413,14 +2400,11 @@
       },
       "System.Text.Encodings.Web/4.7.1": {
         "type": "package",
-        "dependencies": {
-          "System.Memory": "4.5.4"
-        },
         "compile": {
-          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+          "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+          "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
         }
       },
       "System.Text.Json/4.7.2": {
@@ -2987,7 +2971,7 @@
       ]
     },
     "Newtonsoft.Json/12.0.3": {
-      "sha512": "aTRmXwR5xYu+mWxE8r8W1DWnL02SeV8LwdQMsLwTWP8OZgrCCyTqvOAe5hRb1VNQYXjln7qr0PKpSyO/pcc19Q==",
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
       "path": "newtonsoft.json/12.0.3",
       "files": [
@@ -3316,24 +3300,22 @@
         "version.txt"
       ]
     },
-    "System.Memory/4.5.4": {
-      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "type": "package",
-      "path": "system.memory/4.5.4",
+      "path": "system.memory/4.5.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.Memory.dll",
-        "lib/net461/System.Memory.xml",
         "lib/netcoreapp2.1/_._",
         "lib/netstandard1.1/System.Memory.dll",
         "lib/netstandard1.1/System.Memory.xml",
         "lib/netstandard2.0/System.Memory.dll",
         "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
-        "system.memory.4.5.4.nupkg.sha512",
+        "system.memory.4.5.3.nupkg.sha512",
         "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -3815,24 +3797,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Acer\\.nuget\\packages\\": {},
+    "C:\\Users\\Laptop_HP\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer\\Downloads\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
       "projectName": "My Bees Diary.iOS",
-      "projectPath": "C:\\Users\\Acer\\Downloads\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
-      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer\\Downloads\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
+      "packagesPath": "C:\\Users\\Laptop_HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Laptop_HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -3846,8 +3828,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Acer\\Downloads\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
-              "projectPath": "C:\\Users\\Acer\\Downloads\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
+            "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
+              "projectPath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
             }
           }
         }
