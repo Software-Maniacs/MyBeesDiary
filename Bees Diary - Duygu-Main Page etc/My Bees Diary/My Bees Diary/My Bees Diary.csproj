@@ -27,10 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\BeehiveContentPages\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="Views\NoteContentPages\AddNotePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

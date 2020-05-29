@@ -30,12 +30,12 @@ namespace My_Bees_Diary.Models.Entities
         public int Reviews { get; set; }
         public int Treatments { get; set; }
 
-        public decimal Production { get; set; }
-        /*public decimal Production
+        //public decimal Production { get; set; }
+        public decimal Production
         {
             get
             {
-                return Honey + Wax + Propolis + Pollen + Royal + Jelly + Poison;
+                return Honey + Wax + Propolis + Pollen + RoyalJelly + Poison;
             }
             private set
             {
@@ -46,9 +46,8 @@ namespace My_Bees_Diary.Models.Entities
         public decimal Wax { get; set; }
         public decimal Propolis { get; set; }
         public decimal Pollen { get; set; }
-        public decimal Royal { get; set; }
-        public decimal Jelly { get; set; }
-        public decimal Poison { get; set; }*/
+        public decimal RoyalJelly { get; set; }
+        public decimal Poison { get; set; }
         [ForeignKey(typeof(Apiary))]
         public int ApiaryID { get; set; }
 
@@ -66,7 +65,7 @@ namespace My_Bees_Diary.Models.Entities
                 var that = obj as Beehive;
                 return this.ID == that.ID && this.Name == that.Name
                     && this.Number == that.Number && this.Power == that.Power
-                && this.Production == that.Production && this.Reviews == that.Reviews
+                /*&& this.Production == that.Production*/ && this.Reviews == that.Reviews
                 && this.Treatments == that.Treatments && this.TypeBeehive == that.TypeBeehive
                 && this.TypeBees == that.TypeBees && this.Feedings == that.Feedings &&
                 this.Apiary == that.Apiary && this.ApiaryID == that.ApiaryID;

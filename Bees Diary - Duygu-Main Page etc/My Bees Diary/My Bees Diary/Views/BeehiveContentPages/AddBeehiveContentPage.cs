@@ -23,10 +23,6 @@ namespace My_Bees_Diary.Views
         private Picker _apiary;
         private Picker _typeOfBeehive;
         private Picker _typeOfBee;
-        private Entry _production;
-        private Entry _feedings;
-        private Entry _reviews;
-        private Entry _treatments;
         private Button _add;
         private Button _exit;
         private Apiary apiary;
@@ -94,33 +90,7 @@ namespace My_Bees_Diary.Views
                 }
                 );
             stackLayout.Children.Add(_typeOfBee);
-
-            _production = new Entry();
-            _production.Placeholder = "Продукция";
-            _production.Keyboard = Keyboard.Text;
-            stackLayout.Children.Add(_production);
-
-            _feedings = new Entry()
-            {
-                Placeholder = "Хранения",
-                Keyboard = Keyboard.Text
-            };
-            stackLayout.Children.Add(_feedings);
-
-            _reviews = new Entry()
-            {
-                Placeholder = "Прегледи",
-                Keyboard = Keyboard.Text
-            };
-            stackLayout.Children.Add(_reviews);
-
-            _treatments = new Entry()
-            {
-                Placeholder = "Третирания",
-                Keyboard = Keyboard.Text
-            };
-            stackLayout.Children.Add(_treatments);
-
+                        
             _add = new Button();
             _add.Text = "Добави кошер";
             _add.Clicked += Add;
@@ -198,32 +168,6 @@ namespace My_Bees_Diary.Views
                 );
             stackLayout.Children.Add(_typeOfBee);
 
-            _production = new Entry();
-            _production.Placeholder = "Продукция";
-            _production.Keyboard = Keyboard.Text;
-            stackLayout.Children.Add(_production);
-
-            _feedings = new Entry()
-            {
-                Placeholder = "Хранения",
-                Keyboard = Keyboard.Text
-            };
-            stackLayout.Children.Add(_feedings);
-
-            _reviews = new Entry()
-            {
-                Placeholder = "Прегледи",
-                Keyboard = Keyboard.Text
-            };
-            stackLayout.Children.Add(_reviews);
-
-            _treatments = new Entry()
-            {
-                Placeholder = "Третирания",
-                Keyboard = Keyboard.Text
-            };
-            stackLayout.Children.Add(_treatments);
-
             _add = new Button();
             _add.Text = "Добави кошер";
             _add.Clicked += Add;
@@ -270,9 +214,15 @@ namespace My_Bees_Diary.Views
                 Name = _name.Text,
                 TypeBeehive = _typeOfBeehive.SelectedItem.ToString(),
                 TypeBees = _typeOfBee.SelectedItem.ToString(),
-                Feedings = int.Parse(_feedings.Text),
-                Reviews = int.Parse(_reviews.Text),
-                Treatments = int.Parse(_treatments.Text)
+                Feedings = 0,
+                Reviews = 0,
+                Treatments = 0,
+                Honey = 0,
+                Wax = 0,
+                Propolis = 0,
+                Pollen = 0,
+                RoyalJelly = 0,
+                Poison = 0
             };
 
             if (apiary == null)

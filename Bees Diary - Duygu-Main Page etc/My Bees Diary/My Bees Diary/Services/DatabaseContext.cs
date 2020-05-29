@@ -36,8 +36,9 @@ namespace My_Bees_Diary.Services
             modelBuilder.Entity<Apiary>()
                 .HasMany(apiary => apiary.Beehives)
                 .WithOne(beehive => beehive.Apiary)
-                .OnDelete(DeleteBehavior.NoAction);
+                .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<Note>();
            /* modelBuilder.Entity<Apiary>()
                 .HasMany(apiary => apiary.PlantsInArea)
                 .WithOne(apiary=>apiary.Apiary)
