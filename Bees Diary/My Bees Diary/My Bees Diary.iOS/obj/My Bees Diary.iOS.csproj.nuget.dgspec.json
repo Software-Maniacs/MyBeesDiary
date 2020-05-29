@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maria12\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj": {}
+    "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maria12\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj": {
+    "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maria12\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
         "projectName": "My Bees Diary.iOS",
-        "projectPath": "C:\\Users\\maria12\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
-        "packagesPath": "C:\\Users\\maria12\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maria12\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\obj\\",
+        "projectPath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
+        "packagesPath": "C:\\Users\\Laptop_HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\maria12\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Laptop_HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\maria12\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
-                "projectPath": "C:\\Users\\maria12\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
+              "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
+                "projectPath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
               }
             }
           }
@@ -65,21 +65,20 @@
         }
       }
     },
-    "C:\\Users\\maria12\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
+    "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maria12\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
+        "projectUniqueName": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
         "projectName": "My Bees Diary",
-        "projectPath": "C:\\Users\\maria12\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
-        "packagesPath": "C:\\Users\\maria12\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maria12\\Documents\\GitHub\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\obj\\",
+        "projectPath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
+        "packagesPath": "C:\\Users\\Laptop_HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary\\Bees Diary - Duygu-Main Page etc\\My Bees Diary\\My Bees Diary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\maria12\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Laptop_HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -155,7 +154,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

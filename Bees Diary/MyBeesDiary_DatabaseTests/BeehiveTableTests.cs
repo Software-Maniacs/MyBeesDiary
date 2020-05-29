@@ -39,7 +39,7 @@ namespace MyBeesDiary_DatabaseTests
                 Number = "80043",
                 Power = 4,
                 Feedings = 4,
-                Production = 456,
+                //Production = 456,
                 TypeBeehive = "Mobile",
                 Treatments = 6,
                 TypeBees = "Yellow",

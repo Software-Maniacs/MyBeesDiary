@@ -23,17 +23,13 @@ namespace My_Bees_Diary.Views
         private Picker _apiary;
         private Picker _typeOfBeehive;
         private Picker _typeOfBee;
-        private Entry _production;
-        private Entry _feedings;
-        private Entry _reviews;
-        private Entry _treatments;
         private Button _add;
         private Button _exit;
         private Apiary apiary;
         public AddBeehiveContentPage(string dbPath)
         {
             db = new SQLiteConnection(dbPath);
-            apiary = new Apiary();
+            apiary = null;
             StackLayout stackLayout = new StackLayout();
 
             _name = new Entry
@@ -94,33 +90,7 @@ namespace My_Bees_Diary.Views
                 }
                 );
             stackLayout.Children.Add(_typeOfBee);
-
-            _production = new Entry();
-            _production.Placeholder = "Продукция";
-            _production.Keyboard = Keyboard.Text;
-            stackLayout.Children.Add(_production);
-
-            _feedings = new Entry()
-            {
-                Placeholder = "Хранения",
-                Keyboard = Keyboard.Text
-            };
-            stackLayout.Children.Add(_feedings);
-
-            _reviews = new Entry()
-            {
-                Placeholder = "Прегледи",
-                Keyboard = Keyboard.Text
-            };
-            stackLayout.Children.Add(_reviews);
-
-            _treatments = new Entry()
-            {
-                Placeholder = "Третирания",
-                Keyboard = Keyboard.Text
-            };
-            stackLayout.Children.Add(_treatments);
-
+                        
             _add = new Button();
             _add.Text = "Добави кошер";
             _add.Clicked += Add;
@@ -198,32 +168,6 @@ namespace My_Bees_Diary.Views
                 );
             stackLayout.Children.Add(_typeOfBee);
 
-            _production = new Entry();
-            _production.Placeholder = "Продукция";
-            _production.Keyboard = Keyboard.Text;
-            stackLayout.Children.Add(_production);
-
-            _feedings = new Entry()
-            {
-                Placeholder = "Хранения",
-                Keyboard = Keyboard.Text
-            };
-            stackLayout.Children.Add(_feedings);
-
-            _reviews = new Entry()
-            {
-                Placeholder = "Прегледи",
-                Keyboard = Keyboard.Text
-            };
-            stackLayout.Children.Add(_reviews);
-
-            _treatments = new Entry()
-            {
-                Placeholder = "Третирания",
-                Keyboard = Keyboard.Text
-            };
-            stackLayout.Children.Add(_treatments);
-
             _add = new Button();
             _add.Text = "Добави кошер";
             _add.Clicked += Add;
@@ -270,22 +214,25 @@ namespace My_Bees_Diary.Views
                 Name = _name.Text,
                 TypeBeehive = _typeOfBeehive.SelectedItem.ToString(),
                 TypeBees = _typeOfBee.SelectedItem.ToString(),
-                Production = decimal.Parse(_production.Text),
-                Feedings = int.Parse(_feedings.Text),
-                Reviews = int.Parse(_reviews.Text),
-                Treatments = int.Parse(_treatments.Text)
+                Feedings = 0,
+                Reviews = 0,
+                Treatments = 0,
+                Honey = 0,
+                Wax = 0,
+                Propolis = 0,
+                Pollen = 0,
+                RoyalJelly = 0,
+                Poison = 0
             };
 
-            if (!_apiary.SelectedItem.Equals(null))
+            if (apiary == null)
             {
-                Apiary apiary = db.Query<Apiary>("select * from Apiary where id = " +
+                 apiary = db.Query<Apiary>("select * from Apiary where id = " +
                                int.Parse(_apiary.SelectedItem.ToString().Split().ToArray()[0])).First();
             }
-            apiary.Beehives.Add(beehive);
-            beehive.Apiary = apiary;
+            beehive.ApiaryID = apiary.ID;
 
             db.Insert(beehive);
-            db.Update(apiary);
             await DisplayAlert(null, "Кошер " + _name.Text + " се добави в пчелинa.", "OK");
             await Navigation.PopAsync();
         }

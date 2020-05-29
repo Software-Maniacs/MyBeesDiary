@@ -1,4 +1,5 @@
 ﻿using My_Bees_Diary.Models.Entities;
+using My_Bees_Diary.Views.BeehiveContentPages;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -17,12 +18,11 @@ namespace My_Bees_Diary.Views
         private Entry _number;
         private Picker _typeOfBeehive;
         private Picker _typeOfBee;
-        private Entry _production;
-        private Entry _power;
         private Button _save;
         private Button _exit;
         private Button _delete;
         private Button _activities;
+        private Button _production;
         public BeehiveInfoPage(Beehive beehive, string dbPath)
         {
             db = new SQLiteConnection(dbPath);
@@ -79,24 +79,19 @@ namespace My_Bees_Diary.Views
                 );
             stackLayout.Children.Add(_typeOfBee);
 
-            _production = new Entry()
-            {
-                Text = beehive.Production.ToString()
-            };
-            stackLayout.Children.Add(_production);
-
-            _power = new Entry()
-            {
-                Text = beehive.Power.ToString()
-            };
-            stackLayout.Children.Add(_power);
-
             _save = new Button()
             {
                 Text = "Запази промените"
             };
             _save.Clicked += Save;
             stackLayout.Children.Add(_save);
+
+            _production = new Button()
+            {
+                Text = "Продукция"
+            };
+            _production.Clicked += Production;
+            stackLayout.Children.Add(_production);
 
             _activities = new Button()
             {
@@ -122,6 +117,11 @@ namespace My_Bees_Diary.Views
             Content = stackLayout;
         }
 
+        private async void Production(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProductionsPage(db.DatabasePath, beehive));
+        }
+
         private async void Activities(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ActivitiesPage(db.DatabasePath, beehive));
@@ -143,8 +143,6 @@ namespace My_Bees_Diary.Views
         {
             beehive.Name = _name.Text;
             beehive.Number = _number.Text;
-            beehive.Production = decimal.Parse(_production.Text);
-            beehive.Power = decimal.Parse(_power.Text);
 
             if(_typeOfBeehive.SelectedItem != null)
             {

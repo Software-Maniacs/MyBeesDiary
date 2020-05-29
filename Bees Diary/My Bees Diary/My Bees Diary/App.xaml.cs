@@ -6,16 +6,18 @@ using My_Bees_Diary.Views;
 using SQLite;
 using My_Bees_Diary.Models.Entities;
 using My_Bees_Diary.Views.NoteContentPages;
+using My_Bees_Diary.Views.ApiaryContentPages;
 
 namespace My_Bees_Diary
 {
     public partial class App : Application
     {
+        Apiary apiary;
         public App(string dbPath)
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new StartPage(dbPath));
+            MainPage = new MainPage(dbPath);
         }
 
         protected override void OnStart()

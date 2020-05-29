@@ -21,25 +21,27 @@ namespace My_Bees_Diary.Models.Entities
         public string Number { get; set; }
         public string Type { get; set; }
         public DateTime Date { get; set; }
-
-
-        public decimal Production
+        public decimal Production 
         {
             get
             {
-                return production;
+                return Honey + Wax + Propolis + Pollen + RoyalJelly + Poison;
             }
-            set
+            private set
             {
-                production += value;
-                this.power++;
+
             }
         }
+        public decimal Honey { get; set; }
+        public decimal Wax { get; set; }
+        public decimal Propolis { get; set; }
+        public decimal Pollen { get; set; }
+        public decimal RoyalJelly { get; set; }
+        public decimal Poison { get; set; }
+        //public decimal Production { get; set; }
         public string Location { get; set; }
         [OneToMany]
         public virtual ICollection<Beehive> Beehives { get; set; }
-        [OneToOne]
-        public AreaPlants PlantsInArea { get; set; }
 
         public override bool Equals(object obj)
         {
@@ -49,8 +51,7 @@ namespace My_Bees_Diary.Models.Entities
                 return this.ID == that.ID && this.Name == that.Name
                     && this.Number == that.Number && this.Beehives == that.Beehives
                     && this.Date == that.Date && this.Location == that.Location
-                && this.PlantsInArea == that.PlantsInArea && this.Production == that.Production
-                && this.Type == that.Type;
+                    && this.Production == that.Production && this.Type == that.Type;
             }
             return false;
         }

@@ -36,15 +36,16 @@ namespace My_Bees_Diary.Services
             modelBuilder.Entity<Apiary>()
                 .HasMany(apiary => apiary.Beehives)
                 .WithOne(beehive => beehive.Apiary)
-                .OnDelete(DeleteBehavior.NoAction);
+                .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<Apiary>()
-                .HasOne(apiary => apiary.PlantsInArea)
-                .WithOne(area => area.Apiary)
+            modelBuilder.Entity<Note>();
+           /* modelBuilder.Entity<Apiary>()
+                .HasMany(apiary => apiary.PlantsInArea)
+                .WithOne(apiary=>apiary.Apiary)
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Plant>()
-                .HasNoKey();
+                .HasNoKey();*/
 
             base.OnModelCreating(modelBuilder);
         }

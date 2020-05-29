@@ -100,31 +100,37 @@
     <AndroidResource Include="Resources\drawable\add.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icons-MyBeesDiary\apiary.png" />
+    <AndroidResource Include="Resources\drawable\apiary.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icons-MyBeesDiary\beehive.png" />
+    <AndroidResource Include="Resources\drawable\background.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icons-MyBeesDiary\compare.png" />
+    <AndroidResource Include="Resources\drawable\beehive.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icons-MyBeesDiary\helpfulinfo.png" />
+    <AndroidResource Include="Resources\drawable\compare.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icons-MyBeesDiary\location.png" />
+    <AndroidResource Include="Resources\drawable\helpfulinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\notes.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icons-MyBeesDiary\production.png" />
+    <AndroidResource Include="Resources\drawable\production.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icons-MyBeesDiary\scoreboard.png" />
+    <AndroidResource Include="Resources\drawable\scoreboard.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icons-MyBeesDiary\statistics.png" />
+    <AndroidResource Include="Resources\drawable\statistics.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

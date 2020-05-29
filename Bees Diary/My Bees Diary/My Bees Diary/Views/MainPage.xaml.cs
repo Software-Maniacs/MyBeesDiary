@@ -4,52 +4,59 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-using My_Bees_Diary.Models;
+using SQLite;
+using My_Bees_Diary.Models.Entities;
+using My_Bees_Diary.Views.NoteContentPages;
+//using My_Bees_Diary.Views.Notes;
 
 namespace My_Bees_Diary.Views
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
     public partial class MainPage : MasterDetailPage
     {
-        Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
-        public MainPage()
+        public List<MainPageItem> mainPageItems { get; set; }
+        private SQLiteConnection db;
+        private string _dbPath;
+
+
+        public MainPage(string dbPath)
         {
             InitializeComponent();
 
-            MasterBehavior = MasterBehavior.Popover;
+            db = new SQLiteConnection(dbPath);
+            _dbPath = dbPath;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+
+            mainPageItems = new List<MainPageItem>();
+            mainPageItems.Add(new MainPageItem
+            { Title = "Табло", IconSource = "scoreboard.png", TargetType = typeof(StartPage), args = new object[] { _dbPath } });
+            mainPageItems.Add(new MainPageItem { Title = "Кошери", IconSource = "beehive.png", TargetType = typeof(GetBeehivesContentPage), args = new object[] { _dbPath } });
+            mainPageItems.Add(new MainPageItem { Title = "Добави кошер", IconSource = "add.png", TargetType = typeof(AddBeehiveContentPage), args = new object[] { _dbPath } });
+            mainPageItems.Add(new MainPageItem { Title = "Сравни кошер", IconSource = "compare.png", TargetType = typeof(GetBeehivesFromComparing), args = new object[] { _dbPath } });
+            mainPageItems.Add(new MainPageItem { Title = "Пчелини", IconSource = "apiary.png", TargetType = typeof(ApiariesListView), args = new object[] { _dbPath } });
+            mainPageItems.Add(new MainPageItem { Title = "Добави пчелин", IconSource = "add.png", TargetType = typeof(AddApiaryPage), args = new object[] { _dbPath } });
+            mainPageItems.Add(new MainPageItem { Title = "Сравни пчелин", IconSource = "compare.png", TargetType = typeof(CompareTwoApiaries), args = new object[] { _dbPath } });
+            mainPageItems.Add(new MainPageItem { Title = "Статистика", IconSource = "statistics.png", TargetType = typeof(Page3), args = new object[] { _dbPath } });
+            mainPageItems.Add(new MainPageItem { Title = "Записки", IconSource = "notes.png", TargetType = typeof(AddNotePage), args = new object[] { _dbPath } });
+            mainPageItems.Add(new MainPageItem { Title = "Добави записка", IconSource = "add.png", TargetType = typeof(NotePage), args = new object[] { _dbPath } });
+
+            menuListView.ItemsSource = mainPageItems;
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(StartPage), new object[] { _dbPath }));
+
+            menuListView.ItemSelected += OnMenuItemSelected;
         }
 
-        public async Task NavigateFromMenu(int id)
+        private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (!MenuPages.ContainsKey(id))
-            {
-                switch (id)
-                {
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
-                        break;
-                    case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
-                        break;
-                }
-            }
+            var item = (MainPageItem)e.SelectedItem;
+            Type page = item.TargetType;
+            Detail = new NavigationPage((Page)Activator.CreateInstance(page, item.args));
+            IsPresented = false;
 
-            var newPage = MenuPages[id];
+        }
 
-            if (newPage != null && Detail != newPage)
-            {
-                Detail = newPage;
-
-                if (Device.RuntimePlatform == Device.Android)
-                    await Task.Delay(100);
-
-                IsPresented = false;
-            }
+        internal Task NavigateFromMenu(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
