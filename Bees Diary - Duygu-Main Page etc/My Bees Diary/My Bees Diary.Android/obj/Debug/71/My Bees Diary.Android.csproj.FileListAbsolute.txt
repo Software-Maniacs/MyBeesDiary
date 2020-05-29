@@ -1,0 +1,3 @@
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\71\MonoAndroid,Version=v7.1.AssemblyAttributes.cs
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\71\build.props
+C:\Users\Acer\Desktop\Нова папка\MyBeesDiary-master\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\71\adb.props
