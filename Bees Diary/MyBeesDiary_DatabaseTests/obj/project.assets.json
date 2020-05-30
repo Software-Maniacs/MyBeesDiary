@@ -5400,11 +5400,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\MyBeesDiary_DatabaseTests\\MyBeesDiary_DatabaseTests.csproj",
+      "projectUniqueName": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\MyBeesDiary_DatabaseTests\\MyBeesDiary_DatabaseTests.csproj",
       "projectName": "MyBeesDiary_DatabaseTests",
-      "projectPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\MyBeesDiary_DatabaseTests\\MyBeesDiary_DatabaseTests.csproj",
+      "projectPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\MyBeesDiary_DatabaseTests\\MyBeesDiary_DatabaseTests.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\MyBeesDiary_DatabaseTests\\obj\\",
+      "outputPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\MyBeesDiary_DatabaseTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -5425,8 +5425,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
-              "projectPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
+            "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
+              "projectPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
             }
           }
         }

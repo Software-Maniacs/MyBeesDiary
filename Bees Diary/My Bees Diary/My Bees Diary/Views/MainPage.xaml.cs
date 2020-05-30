@@ -35,9 +35,8 @@ namespace My_Bees_Diary.Views
             mainPageItems.Add(new MainPageItem { Title = "Пчелини", IconSource = "apiary.png", TargetType = typeof(ApiariesListView), args = new object[] { _dbPath } });
             mainPageItems.Add(new MainPageItem { Title = "Добави пчелин", IconSource = "add.png", TargetType = typeof(AddApiaryPage), args = new object[] { _dbPath } });
             mainPageItems.Add(new MainPageItem { Title = "Сравни пчелин", IconSource = "compare.png", TargetType = typeof(CompareTwoApiaries), args = new object[] { _dbPath } });
-            mainPageItems.Add(new MainPageItem { Title = "Статистика", IconSource = "statistics.png", TargetType = typeof(Page3), args = new object[] { _dbPath } });
-            mainPageItems.Add(new MainPageItem { Title = "Записки", IconSource = "notes.png", TargetType = typeof(AddNotePage), args = new object[] { _dbPath } });
-            mainPageItems.Add(new MainPageItem { Title = "Добави записка", IconSource = "add.png", TargetType = typeof(NotePage), args = new object[] { _dbPath } });
+            mainPageItems.Add(new MainPageItem { Title = "Записки", IconSource = "notes.png", TargetType = typeof(NotePage), args = new object[] { _dbPath } });
+            mainPageItems.Add(new MainPageItem { Title = "Добави записка", IconSource = "add.png", TargetType = typeof(AddNotePage), args = new object[] { _dbPath } });
 
             menuListView.ItemsSource = mainPageItems;
             Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(StartPage), new object[] { _dbPath }));

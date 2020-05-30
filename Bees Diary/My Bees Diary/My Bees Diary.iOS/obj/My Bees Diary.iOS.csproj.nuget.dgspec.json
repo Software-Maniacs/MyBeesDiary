@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj": {}
+    "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj": {
+    "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
         "projectName": "My Bees Diary.iOS",
-        "projectPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
-                "projectPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
+              "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
+    "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
         "projectName": "My Bees Diary",
-        "projectPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
