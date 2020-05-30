@@ -9,14 +9,28 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views
 {
+    /// <summary>
+    /// In this page we have list view of the all added beehives. The user can make changes to each beehive by clicking on it.
+    /// </summary>
 	public class GetBeehivesContentPage : ContentPage
     {
         private SQLiteConnection db;
         private ListView _list;
+        
+        /// <remarks>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// </remarks>
+        /// <param name="dbPath">Path of the database.</param>
         public GetBeehivesContentPage(string dbPath)
         {
             db = new SQLiteConnection(dbPath);
             StackLayout stackLayout = new StackLayout();
+            stackLayout.BackgroundColor = Color.AliceBlue;
+
+            Label label = new Label()
+            {
+                Text = Title = "Моите кошери"
+            };
 
             _list = new ListView()
             {

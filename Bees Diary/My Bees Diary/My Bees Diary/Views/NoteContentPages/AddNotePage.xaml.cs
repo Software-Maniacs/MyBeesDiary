@@ -67,6 +67,7 @@ namespace My_Bees_Diary.Views.NoteContentPages
                 Date = DateTime.Now
             };
             db.Insert(note);
+                await DisplayAlert(null, "Вие добавихте записка.", "ОК");
             await Navigation.PopAsync();
             }
             

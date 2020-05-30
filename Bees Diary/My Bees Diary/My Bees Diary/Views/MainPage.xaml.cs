@@ -11,12 +11,22 @@ using My_Bees_Diary.Views.NoteContentPages;
 
 namespace My_Bees_Diary.Views
 {
+    /// <summary>
+    /// This is the master detail page. In this page we added navigation to each page and created the menu list.
+    /// </summary>
     public partial class MainPage : MasterDetailPage
     {
+        /// <summary>
+        /// Class MainPageItem contains the components for the menu list visualization.
+        /// </summary>
         public List<MainPageItem> mainPageItems { get; set; }
         private SQLiteConnection db;
         private string _dbPath;
 
+        /// <remarks>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// </remarks>
+        /// <param name="dbPath">Path of the database.</param>
 
         public MainPage(string dbPath)
         {
@@ -35,9 +45,8 @@ namespace My_Bees_Diary.Views
             mainPageItems.Add(new MainPageItem { Title = "Пчелини", IconSource = "apiary.png", TargetType = typeof(ApiariesListView), args = new object[] { _dbPath } });
             mainPageItems.Add(new MainPageItem { Title = "Добави пчелин", IconSource = "add.png", TargetType = typeof(AddApiaryPage), args = new object[] { _dbPath } });
             mainPageItems.Add(new MainPageItem { Title = "Сравни пчелин", IconSource = "compare.png", TargetType = typeof(CompareTwoApiaries), args = new object[] { _dbPath } });
-            mainPageItems.Add(new MainPageItem { Title = "Статистика", IconSource = "statistics.png", TargetType = typeof(Page3), args = new object[] { _dbPath } });
-            mainPageItems.Add(new MainPageItem { Title = "Записки", IconSource = "notes.png", TargetType = typeof(AddNotePage), args = new object[] { _dbPath } });
-            mainPageItems.Add(new MainPageItem { Title = "Добави записка", IconSource = "add.png", TargetType = typeof(NotePage), args = new object[] { _dbPath } });
+            mainPageItems.Add(new MainPageItem { Title = "Записки", IconSource = "notes.png", TargetType = typeof(NotePage), args = new object[] { _dbPath } });
+            mainPageItems.Add(new MainPageItem { Title = "Добави записка", IconSource = "add.png", TargetType = typeof(AddNotePage), args = new object[] { _dbPath } });
 
             menuListView.ItemsSource = mainPageItems;
             Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(StartPage), new object[] { _dbPath }));
@@ -49,7 +58,7 @@ namespace My_Bees_Diary.Views
         {
             var item = (MainPageItem)e.SelectedItem;
             Type page = item.TargetType;
-            Detail = new NavigationPage((Page)Activator.CreateInstance(page, item.args));
+            Detail = new NavigationPage((Page)Activator.CreateInstance(page, item.args = new object[] { _dbPath }));
             IsPresented = false;
 
         }

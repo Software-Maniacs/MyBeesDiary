@@ -9,6 +9,9 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views.BeehiveContentPages
 {
+    /// <summary>
+    /// In this page the user can add his/her production
+    /// </summary>
 	public class ProductionsPage : ContentPage
 {
         private Label _honeyLabel;
@@ -28,7 +31,14 @@ namespace My_Bees_Diary.Views.BeehiveContentPages
         private SQLiteConnection db;
         private Beehive _beehive;
 
-    public ProductionsPage(string dbPath, Beehive beehive)
+        /// <summary>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// Beehive is the selected object from beehives list.
+        /// </summary>
+        /// <param name="beehive"></param>
+        /// <param name="dbPath"></param>
+
+        public ProductionsPage(string dbPath, Beehive beehive)
     {
             _beehive = beehive;
             db = new SQLiteConnection(dbPath);
@@ -72,7 +82,7 @@ namespace My_Bees_Diary.Views.BeehiveContentPages
 
             _pollenLabel = new Label()
             {
-                Text = "Прашец"
+                Text = "Цветен прашец"
             };
             stackLayout.Children.Add(_pollenLabel);
 
@@ -90,7 +100,7 @@ namespace My_Bees_Diary.Views.BeehiveContentPages
 
             _royalJellyEntry = new Entry()
             {
-                Text = ""
+                Text = _beehive.RoyalJelly.ToString()
             };
             stackLayout.Children.Add(_royalJellyEntry);
 
@@ -98,13 +108,13 @@ namespace My_Bees_Diary.Views.BeehiveContentPages
             {
                 Text = "Отрова"
             };
-            stackLayout.Children.Add(_pollenLabel);
+            stackLayout.Children.Add(_poisonLabel);
 
             _poisonEntry = new Entry()
             {
                 Text = beehive.Poison.ToString()
             };
-            stackLayout.Children.Add(_propolisEntry);
+            stackLayout.Children.Add(_poisonEntry);
 
             _save = new Button()
             {
@@ -120,7 +130,10 @@ namespace My_Bees_Diary.Views.BeehiveContentPages
             _exit.Clicked += Exit;
             stackLayout.Children.Add(_exit);
 
-            Content = stackLayout;
+            ScrollView scrollView = new ScrollView();
+            scrollView.Content = stackLayout;
+
+            Content = scrollView;
     }
 
         private async void Exit(object sender, EventArgs e)
@@ -130,12 +143,31 @@ namespace My_Bees_Diary.Views.BeehiveContentPages
 
         private async void Save(object sender, EventArgs e)
         {
-            _beehive.Honey = decimal.Parse(_honeyEntry.Text);
-            _beehive.Wax = decimal.Parse(_waxEntry.Text);
-            _beehive.Propolis = decimal.Parse(_propolisEntry.Text);
-            _beehive.Pollen = decimal.Parse(_pollenEntry.Text);
-            _beehive.RoyalJelly = decimal.Parse(_royalJellyEntry.Text);
-            _beehive.Poison = decimal.Parse(_poisonEntry.Text);
+            decimal honey = decimal.Parse(_honeyEntry.Text);
+            decimal wax = decimal.Parse(_waxEntry.Text);
+            decimal propolis = decimal.Parse(_propolisEntry.Text);
+            decimal pollen = decimal.Parse(_pollenEntry.Text);
+            decimal royalJelly = decimal.Parse(_royalJellyEntry.Text);
+            decimal poison = decimal.Parse(_poisonEntry.Text);
+
+
+            Apiary apiary = db.Query<Apiary>("select * from Apiary where id = " + _beehive.ApiaryID).First();
+
+            apiary.Honey += honey;
+            apiary.Wax += wax;
+            apiary.Propolis += propolis;
+            apiary.Pollen += pollen;
+            apiary.RoyalJelly += royalJelly;
+            apiary.Poison += poison;
+
+            db.Update(apiary);
+
+            _beehive.Honey += honey;
+            _beehive.Wax += wax;
+            _beehive.Propolis += propolis;
+            _beehive.Pollen += pollen;
+            _beehive.RoyalJelly += royalJelly;
+            _beehive.Poison += poison;
 
             db.Update(_beehive);
             await DisplayAlert(null, "Промените са запазени.", "ОК");

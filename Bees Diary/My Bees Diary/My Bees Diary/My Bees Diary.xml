@@ -53,6 +53,145 @@
             <param name="obj">The other note.</param>
             <returns>Bool that indicated whether they are equal or not.</returns>
         </member>
+        <member name="T:My_Bees_Diary.Views.AddApiaryPage">
+            <summary>
+            In this page the user can add apiaries to the data base.
+            </summary>
+        </member>
+        <member name="M:My_Bees_Diary.Views.AddApiaryPage.#ctor(System.String)">
+            <remarks>
+            When the page is initiated, it connects to the database through the database path.
+            </remarks>
+            <param name="dbPath">Path of the database.</param>
+        </member>
+        <member name="T:My_Bees_Diary.Views.ApiariesListView">
+            <summary>
+            In this page we have list view of the all added apiaries. The user can make changes to each beehive by clicking on it.
+            </summary>
+        </member>
+        <member name="M:My_Bees_Diary.Views.ApiariesListView.#ctor(System.String)">
+            <remarks>
+            When the page is initiated, it connects to the database through the database path.
+            </remarks>
+            <param name="dbPath">Path of the database.</param>
+        </member>
+        <member name="T:My_Bees_Diary.Views.ApiaryContentPages.ApiaryInfoPage">
+            <summary>
+            In this page the user can edit his/hers apiary notes. Edits can be realised by clicking the added buttons.
+            </summary>
+        </member>
+        <member name="M:My_Bees_Diary.Views.ApiaryContentPages.ApiaryInfoPage.#ctor(My_Bees_Diary.Models.Entities.Apiary,System.String)">
+            <summary>
+            When the page is initiated, it connects to the database through the database path.
+            Apiary is the selected object from apiaries list.
+            </summary>
+            <param name="apiary"></param>
+            <param name="dbPath"></param>
+        </member>
+        <member name="T:My_Bees_Diary.Views.CompareTwoApiaries">
+            <summary>
+            In this page the user can compare two apiaries. 
+            They can be selected by picker and all the information saved in data base for the selected apiary will be shown.
+            </summary>
+        </member>
+        <member name="M:My_Bees_Diary.Views.CompareTwoApiaries.#ctor(System.String)">
+            <remarks>
+            When the page is initiated, it connects to the database through the database path.
+            </remarks>
+            <param name="dbPath">Path of the database.</param>
+        </member>
+        <member name="T:My_Bees_Diary.Views.AddBeehiveContentPage">
+            <summary>
+            In this page the user can add beehives to the data base.
+            </summary>
+        </member>
+        <member name="M:My_Bees_Diary.Views.AddBeehiveContentPage.#ctor(System.String)">
+            <remarks>
+            When the page is initiated, it connects to the database through the database path.
+            </remarks>
+            <param name="dbPath">Path of the database.</param>
+        </member>
+        <member name="T:My_Bees_Diary.Views.BeehiveInfoPage">
+            <summary>
+            In this page the user can edit his/hers beehive notes. Edits can be realised by clicking the added buttons.
+            </summary>
+        </member>
+        <member name="M:My_Bees_Diary.Views.BeehiveInfoPage.#ctor(My_Bees_Diary.Models.Entities.Beehive,System.String)">
+            <summary>
+            When the page is initiated, it connects to the database through the database path.
+            Beehive is the selected object from beehives list.
+            </summary>
+            <param name="beehive"></param>
+            <param name="dbPath"></param>
+        </member>
+        <member name="T:My_Bees_Diary.Views.GetBeehivesContentPage">
+            <summary>
+            In this page we have list view of the all added beehives. The user can make changes to each beehive by clicking on it.
+            </summary>
+        </member>
+        <member name="M:My_Bees_Diary.Views.GetBeehivesContentPage.#ctor(System.String)">
+            <remarks>
+            When the page is initiated, it connects to the database through the database path.
+            </remarks>
+            <param name="dbPath">Path of the database.</param>
+        </member>
+        <member name="T:My_Bees_Diary.Views.GetBeehivesFromComparing">
+            <summary>
+            In this page the user can compare two beehives. 
+            They can be selected by picker and all the information saved in data base for the selected beehive will be shown.
+            </summary>
+        </member>
+        <member name="M:My_Bees_Diary.Views.GetBeehivesFromComparing.#ctor(System.String)">
+            <remarks>
+            When the page is initiated, it connects to the database through the database path.
+            </remarks>
+            <param name="dbPath">Path of the database.</param>
+        </member>
+        <member name="T:My_Bees_Diary.Views.BeehiveContentPages.ProductionsPage">
+            <summary>
+            In this page the user can add his/her production
+            </summary>
+        </member>
+        <member name="M:My_Bees_Diary.Views.BeehiveContentPages.ProductionsPage.#ctor(System.String,My_Bees_Diary.Models.Entities.Beehive)">
+            <summary>
+            When the page is initiated, it connects to the database through the database path.
+            Beehive is the selected object from beehives list.
+            </summary>
+            <param name="beehive"></param>
+            <param name="dbPath"></param>
+        </member>
+        <member name="T:My_Bees_Diary.Views.TableCompareBeehives">
+            <summary>
+            This page is the navigation page from GetBeehivesFromComparing.
+            Selected beehives beehives are shown in table format.
+            </summary>
+        </member>
+        <member name="M:My_Bees_Diary.Views.TableCompareBeehives.#ctor(System.String,My_Bees_Diary.Models.Entities.Beehive,My_Bees_Diary.Models.Entities.Beehive)">
+            <summary>
+            /// When the page is initiated, it connects to the database through the database path.
+            The paramtar 'beehive1' is the first selected object to compare.
+            The paramtar 'beehive2' is the second selected object to compare.
+            </summary>
+            <param name="databasePath"></param>
+            <param name="beehive1"></param>
+            <param name="beehive2"></param>
+        </member>
+        <member name="T:My_Bees_Diary.Views.MainPage">
+            <summary>
+            This is the master detail page. In this page we added navigation to each page and created the menu list.
+            </summary>
+        </member>
+        <member name="P:My_Bees_Diary.Views.MainPage.mainPageItems">
+            <summary>
+            Class MainPageItem contains the components for the menu list visualization.
+            </summary>
+        </member>
+        <member name="M:My_Bees_Diary.Views.MainPage.#ctor(System.String)">
+            <remarks>
+            When the page is initiated, it connects to the database through the database path.
+            </remarks>
+            <param name="dbPath">Path of the database.</param>
+        </member>
         <member name="T:My_Bees_Diary.Views.NoteContentPages.AddNotePage">
             <summary>
             This is the page, from which the user adds a note.
@@ -98,6 +237,25 @@
             is represented by its summary in the ListView.
             </remarks>
             <param name="dbPath">Path of the database.</param>
+        </member>
+        <member name="T:My_Bees_Diary.Views.StartPage">
+            <summary>
+            This is our Home/Start page. 
+            </summary>
+            <remarks>
+            In this page we added buttons to navigate the user. Each button navigates to its page.
+            </remarks>
+            
+        </member>
+        <member name="M:My_Bees_Diary.Views.StartPage.#ctor(System.String)">
+            <summary>
+            Class constructor.
+            </summary>
+            <remarks>
+            When the page is initiated, it connects to the database through the database path.
+            </remarks>
+            <param name="databasePath">Path of the database.</param>
+            
         </member>
     </members>
 </doc>

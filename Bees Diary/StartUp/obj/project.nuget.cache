@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EYob5pPInq/9JzY/3oGCGa/lavegXhLxzcUs9gcBsE+wp6Fbki0etZn+zAsyczvQQGAI49d6nWJvVNCCE4cejg==",
+  "dgSpecHash": "Q9XbsmdSsJGG4aE2/Yrcy29bSuzcQTnvow1/WYfIpQH8O+d52KjS++/kASRO44E4alIouaas4TC7U6rY/ciTag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Laptop_HP\\Desktop\\dddddddd\\MyBeesDiary\\Bees Diary\\StartUp\\StartUp.csproj",
+  "projectFilePath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary-master\\Bees Diary\\StartUp\\StartUp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Laptop_HP\\.nuget\\packages\\json.net\\1.0.22\\json.net.1.0.22.nupkg.sha512",
     "C:\\Users\\Laptop_HP\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

@@ -10,34 +10,52 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views
 {
+    /// <summary>
+    /// In this page the user can compare two beehives. 
+    /// They can be selected by picker and all the information saved in data base for the selected beehive will be shown.
+    /// </summary>
 	public class GetBeehivesFromComparing : ContentPage
 {
         private SQLiteConnection db;
         private Picker _beehive1;
         private Picker _beehive2;
         private Button _compare;
-    public GetBeehivesFromComparing(string dbPath)
+  
+        /// <remarks>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// </remarks>
+        /// <param name="dbPath">Path of the database.</param>
+        public GetBeehivesFromComparing(string dbPath)
     {
             db = new SQLiteConnection(dbPath);
             StackLayout stackLayout = new StackLayout();
+            stackLayout.BackgroundColor = Color.AliceBlue;
+            stackLayout.HorizontalOptions = LayoutOptions.Center;
+            stackLayout.HorizontalOptions = LayoutOptions.Center;
+            Label label = new Label()
+            {
+                Text = Title = "Сравни кошери"
+            };
 
             _beehive1 = new Picker()
             {
                 ItemsSource = db.Table<Beehive>().ToList(),
-                Title = "Избери кошер"
+                Title = "Избери кошер за сравнение"
             };
             stackLayout.Children.Add(_beehive1);
 
             _beehive2 = new Picker()
             {
-                Title = "Избери кошер",
+                Title = "Избери кошер за сравнение",
                 ItemsSource = db.Table<Beehive>().OrderBy(b => b.ApiaryID).ThenBy(b => b.ID).ToList()
             };
             stackLayout.Children.Add(_beehive2);
 
             _compare = new Button()
             {
-                Text = "Сравни"
+                Text = "Сравни",
+                 BackgroundColor = Color.CornflowerBlue,
+                TextColor = Color.White
             };
             _compare.Clicked += Compare;
             stackLayout.Children.Add(_compare);

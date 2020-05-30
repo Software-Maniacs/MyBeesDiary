@@ -12,19 +12,34 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views
 {
-	public class CompareTwoApiaries : ContentPage
-{
+
+    /// <summary>
+    /// In this page the user can compare two apiaries. 
+    /// They can be selected by picker and all the information saved in data base for the selected apiary will be shown.
+    /// </summary>
+    public class CompareTwoApiaries : ContentPage
+    {
         private SQLiteConnection db;
         private Picker firstApiaryPicker;
         private Picker secondApiaryPicker;
         private Button done;
-        private ListView listView;
+        private StackLayout compareStack;
+
+        /// <remarks>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// </remarks>
+        /// <param name="dbPath">Path of the database.</param>
 
         public CompareTwoApiaries(string dbPath)
         {
             db = new SQLiteConnection(dbPath);
 
             StackLayout stackLayout = new StackLayout();
+            stackLayout.BackgroundColor = Color.AliceBlue;
+            Label label = new Label()
+            {
+                Text = Title = "Сравни кошери"
+            };
 
             firstApiaryPicker = new Picker()
             {
@@ -35,7 +50,7 @@ namespace My_Bees_Diary.Views
             firstApiaryPicker.ItemsSource = allApiariesNumbers.ToList();
             stackLayout.Children.Add(firstApiaryPicker);
 
-           secondApiaryPicker = new Picker()
+            secondApiaryPicker = new Picker()
             {
                 Title = "Изберете номера на втория пчелин"
             };
@@ -46,7 +61,9 @@ namespace My_Bees_Diary.Views
 
             done = new Button
             {
-               Text="Готово"
+                Text = "Готово",
+                BackgroundColor = Color.CornflowerBlue,
+                TextColor = Color.White
             };
             done.Clicked += DoneButton_Clicked;
             stackLayout.Children.Add(done);
@@ -72,28 +89,269 @@ namespace My_Bees_Diary.Views
             }
             else
             {
-                Apiary firstSelectedApiary = (Apiary)db.Table<Apiary>().Select(a => a.Number.Equals(firstApiaryNumber));
-                Apiary secondSelectedApiary = (Apiary)db.Table<Apiary>().Select(a => a.Number.Equals(secondApiaryNumber));
+                Apiary firstSelectedApiary = GetApiaryWithSameNumber(firstApiaryNumber);
+                Apiary secondSelectedApiary = GetApiaryWithSameNumber(secondApiaryNumber);
+                compareStack = new StackLayout { Spacing = 2 };
 
-                listView = new ListView()
+                Label header1 = new Label
                 {
-                    ItemsSource = firstSelectedApiary.ToString(),
-
-                    VerticalOptions = LayoutOptions.FillAndExpand
+                    FontSize = 30,
+                    Text = "Данни за пчелин 1:"
                 };
+                compareStack.Children.Add(header1);
 
-            Content = new Grid
-            {
-                RowDefinitions = {
-                new RowDefinition { Height = GridLength.Auto },
-                new RowDefinition { Height = new GridLength (1, GridUnitType.Star) }
-            },
-                Children = {
-                listView
+                Label name1 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Име: {firstSelectedApiary.Name}"
+                };
+                compareStack.Children.Add(name1);
+
+                Label number1 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Номер: {firstSelectedApiary.Number}"
+                };
+                compareStack.Children.Add(number1);
+
+                Label type1 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Тип: {firstSelectedApiary.Type}"
+                };
+                compareStack.Children.Add(type1);
+
+                Label date1 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Дата: {firstSelectedApiary.Date:dd/MM/yyyy HH:mm:ss}"
+                };
+                compareStack.Children.Add(date1);
+
+                Label production1 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Продукция: {firstSelectedApiary.Production}"
+                };
+                compareStack.Children.Add(production1);
+
+                Label honey1 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Мед: {firstSelectedApiary.Honey}"
+                };
+                compareStack.Children.Add(honey1);
+
+                Label wax1 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Восък: {firstSelectedApiary.Wax}"
+                };
+                compareStack.Children.Add(wax1);
+
+                Label propolis1 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Прополис: {firstSelectedApiary.Propolis}"
+                };
+                compareStack.Children.Add(propolis1);
+
+                Label pollen1 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Цветен прашец: {firstSelectedApiary.Pollen}"
+                };
+                compareStack.Children.Add(pollen1);
+
+                Label royalJelly1 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Пчелно млечице: {firstSelectedApiary.RoyalJelly}"
+                };
+                compareStack.Children.Add(royalJelly1);
+
+                Label poison1 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Отрова: {firstSelectedApiary.Poison}"
+                };
+                compareStack.Children.Add(poison1);
+
+                Label location1 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Местоположение: {firstSelectedApiary.Location}"
+                };
+                compareStack.Children.Add(location1);
+                if (firstSelectedApiary.Beehives == null)
+                {
+                    compareStack.Children.Add(new Label
+                    {
+                        FontSize = 15,
+                        Text = $"Кошери: Няма въведени кошери."
+                    });
+                }
+                else
+                {
+                    compareStack.Children.Add(new Label
+                    {
+                        FontSize = 15,
+                        Text = "Кошери:"
+                    });
+                    foreach (var beehive in firstSelectedApiary.Beehives)
+                    {
+                        compareStack.Children.Add(new Label
+                        {
+                            Text = beehive.ToString(),
+                            FontSize = 10
+                        });
+                    }
+                }
+               
+                Label header2 = new Label
+                {
+                    FontSize = 30,
+                    Text = "Данни за пчелин 2:"
+                };
+                compareStack.Children.Add(header2);
+
+                Label name2 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Име: {secondSelectedApiary.Name}"
+                };
+                compareStack.Children.Add(name2);
+
+                Label number2 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Номер: {secondSelectedApiary.Number}"
+                };
+                compareStack.Children.Add(number2);
+
+                Label type2 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Тип: {secondSelectedApiary.Type}"
+                };
+                compareStack.Children.Add(type2);
+
+                Label date2 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Дата: {secondSelectedApiary.Date:dd/MM/yyyy HH:mm:ss}"
+                };
+                compareStack.Children.Add(date2);
+
+                Label production2 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Продукция: {secondSelectedApiary.Production}"
+                };
+                compareStack.Children.Add(production2);
+
+                Label honey2 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Мед: {secondSelectedApiary.Honey}"
+                };
+                compareStack.Children.Add(honey1);
+
+                Label wax2 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Восък: {secondSelectedApiary.Wax}"
+                };
+                compareStack.Children.Add(wax2);
+
+                Label propolis2 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Прополис: {secondSelectedApiary.Propolis}"
+                };
+                compareStack.Children.Add(propolis2);
+
+                Label pollen2 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Цветен прашец: {secondSelectedApiary.Pollen}"
+                };
+                compareStack.Children.Add(pollen2);
+
+                Label royalJelly2 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Пчелно млечице: {secondSelectedApiary.RoyalJelly}"
+                };
+                compareStack.Children.Add(royalJelly2);
+
+                Label poison2 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Отрова: {secondSelectedApiary.Poison}"
+                };
+                compareStack.Children.Add(poison2);
+
+                Label location2 = new Label
+                {
+                    FontSize = 15,
+                    Text = $"Местоположение: {secondSelectedApiary.Location}"
+                };
+                compareStack.Children.Add(location2);
+                if (secondSelectedApiary.Beehives == null)
+                {
+                    compareStack.Children.Add(new Label
+                    {
+                        FontSize = 15,
+                        Text = $"Кошери: Няма въведени кошери."
+                    });
+                }
+                else
+                {
+                    compareStack.Children.Add(new Label
+                    {
+                        FontSize = 15,
+                        Text = "Кошери:"
+                    });
+                    foreach (var beehive in secondSelectedApiary.Beehives)
+                    {
+                        compareStack.Children.Add(new Label
+                        {
+                            Text = beehive.ToString(),
+                            FontSize = 10
+                        });
+                    }
+                }
+               
+                Button button = new Button
+                {
+                    HorizontalOptions = LayoutOptions.Center,
+                    Text = "Назад",
+                    BackgroundColor = Color.CornflowerBlue,
+                    TextColor = Color.White
+                };
+                button.Clicked += ExitIsClicked;
+                compareStack.Children.Add(button);
+                Content = new ScrollView
+                {
+                    Content = compareStack
+                };
             }
-            };
         }
-
+        private Apiary GetApiaryWithSameNumber(string number)
+        {
+            foreach (var apiary in db.Table<Apiary>())
+            {
+                if (apiary.Number == number)
+                {
+                    return apiary;
+                }
+            }
+            return null;
+        }
+        private async void ExitIsClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

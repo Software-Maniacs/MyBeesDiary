@@ -3803,11 +3803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Laptop_HP\\Desktop\\dddddddd\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
       "projectName": "My Bees Diary.iOS",
-      "projectPath": "C:\\Users\\Laptop_HP\\Desktop\\dddddddd\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
+      "projectPath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\My Bees Diary.iOS.csproj",
       "packagesPath": "C:\\Users\\Laptop_HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Laptop_HP\\Desktop\\dddddddd\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3828,8 +3828,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Laptop_HP\\Desktop\\dddddddd\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
-              "projectPath": "C:\\Users\\Laptop_HP\\Desktop\\dddddddd\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
+            "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
+              "projectPath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
             }
           }
         }
