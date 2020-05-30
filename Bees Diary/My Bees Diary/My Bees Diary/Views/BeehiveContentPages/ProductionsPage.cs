@@ -9,6 +9,9 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views.BeehiveContentPages
 {
+    /// <summary>
+    /// In this page the user can add his/her production
+    /// </summary>
 	public class ProductionsPage : ContentPage
 {
         private Label _honeyLabel;
@@ -28,7 +31,14 @@ namespace My_Bees_Diary.Views.BeehiveContentPages
         private SQLiteConnection db;
         private Beehive _beehive;
 
-    public ProductionsPage(string dbPath, Beehive beehive)
+        /// <summary>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// Beehive is the selected object from beehives list.
+        /// </summary>
+        /// <param name="beehive"></param>
+        /// <param name="dbPath"></param>
+
+        public ProductionsPage(string dbPath, Beehive beehive)
     {
             _beehive = beehive;
             db = new SQLiteConnection(dbPath);

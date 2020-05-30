@@ -11,12 +11,22 @@ using My_Bees_Diary.Views.NoteContentPages;
 
 namespace My_Bees_Diary.Views
 {
+    /// <summary>
+    /// This is the master detail page. In this page we added navigation to each page and created the menu list.
+    /// </summary>
     public partial class MainPage : MasterDetailPage
     {
+        /// <summary>
+        /// Class MainPageItem contains the components for the menu list visualization.
+        /// </summary>
         public List<MainPageItem> mainPageItems { get; set; }
         private SQLiteConnection db;
         private string _dbPath;
 
+        /// <remarks>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// </remarks>
+        /// <param name="dbPath">Path of the database.</param>
 
         public MainPage(string dbPath)
         {

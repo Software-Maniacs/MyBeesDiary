@@ -177,3 +177,4 @@ C:\Users\Acer\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Deb
 C:\Users\Acer\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.dll
 C:\Users\Acer\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\ref\My Bees Diary.dll
 C:\Users\Acer\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\obj\Debug\netstandard2.0\My Bees Diary.pdb
+C:\Users\Acer\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\bin\Debug\netstandard2.0\My Bees Diary.xml

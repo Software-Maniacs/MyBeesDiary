@@ -3581,3 +3581,4 @@ C:\Users\Acer\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary.Android
 C:\Users\Acer\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\81\stamp\_GenerateJavaStubs.stamp
 C:\Users\Acer\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\81\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Acer\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary.Android\obj\Debug\81\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Acer\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary.Android\bin\Debug\My Bees Diary.xml

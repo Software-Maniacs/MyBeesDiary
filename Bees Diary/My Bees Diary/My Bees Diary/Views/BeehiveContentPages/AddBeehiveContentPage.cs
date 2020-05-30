@@ -13,7 +13,9 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace My_Bees_Diary.Views
-{
+{/// <summary>
+/// In this page the user can add beehives to the data base.
+/// </summary>
     public class AddBeehiveContentPage : ContentPage
     {
         private SQLiteConnection db;
@@ -26,6 +28,11 @@ namespace My_Bees_Diary.Views
         private Button _add;
         private Button _exit;
         private Apiary apiary;
+     
+        /// <remarks>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// </remarks>
+        /// <param name="dbPath">Path of the database.</param>
         public AddBeehiveContentPage(string dbPath)
         {
             db = new SQLiteConnection(dbPath);

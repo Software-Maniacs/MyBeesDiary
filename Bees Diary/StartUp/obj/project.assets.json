@@ -1730,11 +1730,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\StartUp\\StartUp.csproj",
+      "projectUniqueName": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\StartUp\\StartUp.csproj",
       "projectName": "StartUp",
-      "projectPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\StartUp\\StartUp.csproj",
+      "projectPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\StartUp\\StartUp.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\StartUp\\obj\\",
+      "outputPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\StartUp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -1755,8 +1755,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
-              "projectPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
+            "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
+              "projectPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
             }
           }
         }

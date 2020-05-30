@@ -8,7 +8,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>C:\Users\Acer\Desktop\MyBeesDiary\Bees Diary\My Bees Diary\My Bees Diary\My Bees Diary.xml</DocumentationFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
 

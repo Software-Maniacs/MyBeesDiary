@@ -10,6 +10,9 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views
 {
+    /// <summary>
+    /// In this page the user can add apiaries to the data base.
+    /// </summary>
     public class AddApiaryPage : ContentPage
     {
         private SQLiteConnection db;
@@ -22,6 +25,11 @@ namespace My_Bees_Diary.Views
         private Entry apiaryLocation;
         private Button add;
         private Button exit;
+
+        /// <remarks>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// </remarks>
+        /// <param name="dbPath">Path of the database.</param>
 
         public AddApiaryPage(string dbPath)
         {

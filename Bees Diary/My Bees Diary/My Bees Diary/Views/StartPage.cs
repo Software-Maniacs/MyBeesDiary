@@ -7,6 +7,13 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views
 {
+    /// <summary>
+    /// This is our Home/Start page. 
+    /// </summary>
+    /// <remarks>
+    /// In this page we added buttons to navigate the user. Each button navigates to its page.
+    /// </remarks>
+    /// 
     public class StartPage : ContentPage
     {
         private Button _addApiary;
@@ -16,6 +23,16 @@ namespace My_Bees_Diary.Views
         private Button _getBeehive;
         private Button _statistic;
         private string dbPath;
+
+        /// <summary>
+        /// Class constructor.
+        /// </summary>
+        /// <remarks>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// </remarks>
+        /// <param name="databasePath">Path of the database.</param>
+        /// 
+
         public StartPage(string databasePath)
         {
             dbPath = databasePath;

@@ -9,9 +9,21 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views
 {
+    /// <summary>
+    /// This page is the navigation page from GetBeehivesFromComparing.
+    /// Selected beehives beehives are shown in table format.
+    /// </summary>
     public class TableCompareBeehives : ContentPage
     {
         private SQLiteConnection db;
+        /// <summary>
+        /// /// When the page is initiated, it connects to the database through the database path.
+        /// The paramtar 'beehive1' is the first selected object to compare.
+        /// The paramtar 'beehive2' is the second selected object to compare.
+        /// </summary>
+        /// <param name="databasePath"></param>
+        /// <param name="beehive1"></param>
+        /// <param name="beehive2"></param>
         public TableCompareBeehives(string databasePath, Beehive beehive1, Beehive beehive2)
         {
             db = new SQLiteConnection(databasePath);

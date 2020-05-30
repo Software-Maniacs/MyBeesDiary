@@ -10,6 +10,9 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views
 {
+    /// <summary>
+    /// In this page the user can edit his/hers beehive notes. Edits can be realised by clicking the added buttons.
+    /// </summary>
 	public class BeehiveInfoPage : ContentPage
     {
         private SQLiteConnection db;
@@ -23,6 +26,12 @@ namespace My_Bees_Diary.Views
         private Button _delete;
         private Button _activities;
         private Button _production;
+        /// <summary>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// Beehive is the selected object from beehives list.
+        /// </summary>
+        /// <param name="beehive"></param>
+        /// <param name="dbPath"></param>
         public BeehiveInfoPage(Beehive beehive, string dbPath)
         {
             db = new SQLiteConnection(dbPath);

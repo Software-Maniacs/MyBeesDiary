@@ -11,10 +11,18 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views
 {
+    /// <summary>
+    /// In this page we have list view of the all added apiaries. The user can make changes to each beehive by clicking on it.
+    /// </summary>
     public class ApiariesListView : ContentPage
     {
         private SQLiteConnection db;
         private ListView apiaryListView;
+
+        /// <remarks>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// </remarks>
+        /// <param name="dbPath">Path of the database.</param>
 
         public ApiariesListView(string dbPath)
         {

@@ -12,6 +12,11 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views
 {
+
+    /// <summary>
+    /// In this page the user can compare two apiaries. 
+    /// They can be selected by picker and all the information saved in data base for the selected apiary will be shown.
+    /// </summary>
     public class CompareTwoApiaries : ContentPage
     {
         private SQLiteConnection db;
@@ -19,6 +24,11 @@ namespace My_Bees_Diary.Views
         private Picker secondApiaryPicker;
         private Button done;
         private StackLayout compareStack;
+
+        /// <remarks>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// </remarks>
+        /// <param name="dbPath">Path of the database.</param>
 
         public CompareTwoApiaries(string dbPath)
         {

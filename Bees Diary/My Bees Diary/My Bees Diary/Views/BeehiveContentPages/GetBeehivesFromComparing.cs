@@ -10,13 +10,22 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views
 {
+    /// <summary>
+    /// In this page the user can compare two beehives. 
+    /// They can be selected by picker and all the information saved in data base for the selected beehive will be shown.
+    /// </summary>
 	public class GetBeehivesFromComparing : ContentPage
 {
         private SQLiteConnection db;
         private Picker _beehive1;
         private Picker _beehive2;
         private Button _compare;
-    public GetBeehivesFromComparing(string dbPath)
+  
+        /// <remarks>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// </remarks>
+        /// <param name="dbPath">Path of the database.</param>
+        public GetBeehivesFromComparing(string dbPath)
     {
             db = new SQLiteConnection(dbPath);
             StackLayout stackLayout = new StackLayout();

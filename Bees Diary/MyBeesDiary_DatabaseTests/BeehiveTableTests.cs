@@ -10,6 +10,7 @@ namespace MyBeesDiary_DatabaseTests
     [TestFixture]
     public class BeehiveTableTests
     {
+        
         private SQLiteConnection db = new SQLiteConnection(System.IO.Path.Combine(System.Environment.GetFolderPath(
         System.Environment.SpecialFolder.Personal),
         "testDB.db"

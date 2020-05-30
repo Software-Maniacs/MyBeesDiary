@@ -2450,11 +2450,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.Android\\My Bees Diary.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary.Android\\My Bees Diary.Android.csproj",
       "projectName": "My Bees Diary.Android",
-      "projectPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.Android\\My Bees Diary.Android.csproj",
+      "projectPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary.Android\\My Bees Diary.Android.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary.Android\\obj\\",
+      "outputPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2475,8 +2475,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
-              "projectPath": "C:\\Users\\Acer\\Desktop\\MyBeesDiary\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
+            "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj": {
+              "projectPath": "C:\\Users\\Acer\\Desktop\\dnes\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary\\My Bees Diary.csproj"
             }
           }
         }

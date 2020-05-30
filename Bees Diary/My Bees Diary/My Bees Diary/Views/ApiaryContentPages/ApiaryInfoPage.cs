@@ -8,6 +8,9 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views.ApiaryContentPages
 {
+    /// <summary>
+    /// In this page the user can edit his/hers apiary notes. Edits can be realised by clicking the added buttons.
+    /// </summary>
     class ApiaryInfoPage : ContentPage
     {
         private SQLiteConnection db;
@@ -21,7 +24,14 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
         private Button exit;
         private Apiary _apiary;
 
-        public ApiaryInfoPage(Apiary apiary, /*List<AreaPlants> plantsInArea,*/  string dbPath)
+        /// <summary>
+        /// When the page is initiated, it connects to the database through the database path.
+        /// Apiary is the selected object from apiaries list.
+        /// </summary>
+        /// <param name="apiary"></param>
+        /// <param name="dbPath"></param>
+
+        public ApiaryInfoPage(Apiary apiary, string dbPath)
         {
             _apiary = apiary;
             db = new SQLiteConnection(dbPath);
