@@ -20,6 +20,12 @@ namespace My_Bees_Diary.Views
         {
             db = new SQLiteConnection(dbPath);
             StackLayout stackLayout = new StackLayout();
+            stackLayout.BackgroundColor = Color.AliceBlue;
+
+            Label label = new Label()
+            {
+                Text = Title = "Моите пчелини"
+            };
 
             apiaryListView = new ListView()
             {

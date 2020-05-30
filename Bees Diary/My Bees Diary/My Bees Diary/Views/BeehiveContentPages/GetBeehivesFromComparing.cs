@@ -20,24 +20,33 @@ namespace My_Bees_Diary.Views
     {
             db = new SQLiteConnection(dbPath);
             StackLayout stackLayout = new StackLayout();
+            stackLayout.BackgroundColor = Color.AliceBlue;
+            stackLayout.HorizontalOptions = LayoutOptions.Center;
+            stackLayout.HorizontalOptions = LayoutOptions.Center;
+            Label label = new Label()
+            {
+                Text = Title = "Сравни кошери"
+            };
 
             _beehive1 = new Picker()
             {
                 ItemsSource = db.Table<Beehive>().ToList(),
-                Title = "Избери кошер"
+                Title = "Избери кошер за сравнение"
             };
             stackLayout.Children.Add(_beehive1);
 
             _beehive2 = new Picker()
             {
-                Title = "Избери кошер",
+                Title = "Избери кошер за сравнение",
                 ItemsSource = db.Table<Beehive>().OrderBy(b => b.ApiaryID).ThenBy(b => b.ID).ToList()
             };
             stackLayout.Children.Add(_beehive2);
 
             _compare = new Button()
             {
-                Text = "Сравни"
+                Text = "Сравни",
+                 BackgroundColor = Color.CornflowerBlue,
+                TextColor = Color.White
             };
             _compare.Clicked += Compare;
             stackLayout.Children.Add(_compare);

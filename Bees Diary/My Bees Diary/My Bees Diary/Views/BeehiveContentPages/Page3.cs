@@ -16,7 +16,14 @@ namespace My_Bees_Diary.Views
     {
             databasePath = dbPath;
             StackLayout stackLayout = new StackLayout();
-
+            stackLayout.BackgroundColor = Color.AliceBlue;
+            stackLayout.HorizontalOptions = LayoutOptions.Center;
+            stackLayout.HorizontalOptions = LayoutOptions.Center;
+            Label label = new Label()
+            {
+                Text = Title = "Дейности"
+            };
+            
             _options = new Picker()
             {
                 ItemsSource = new List<string>
@@ -27,13 +34,15 @@ namespace My_Bees_Diary.Views
                     "Сравни кошери"
                     }
                 ),
-                Title = "Избери опция"
+                Title = "Изберeте опция"
             };
             stackLayout.Children.Add(_options);
 
             _button = new Button()
             {
-                Text = "Сравни"
+                Text = "Сравни",
+                BackgroundColor = Color.CornflowerBlue,
+                TextColor = Color.White
             };
             _button.Clicked += Compare;
             stackLayout.Children.Add(_button);

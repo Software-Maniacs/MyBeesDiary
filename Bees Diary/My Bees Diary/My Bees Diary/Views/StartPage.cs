@@ -10,6 +10,7 @@ namespace My_Bees_Diary.Views
     public class StartPage : ContentPage
     {
         private Button _addApiary;
+        private Label label;
         private Button _getApiary;
         private Button _addBeehive;
         private Button _getBeehive;
@@ -20,38 +21,60 @@ namespace My_Bees_Diary.Views
             dbPath = databasePath;
 
             StackLayout stackLayout = new StackLayout();
+            stackLayout.Spacing = 20;
+            stackLayout.BackgroundColor = Color.AliceBlue;
+            stackLayout.HorizontalOptions = LayoutOptions.Center;
+            stackLayout.HorizontalOptions = LayoutOptions.Center;
+
+            label = new Label()
+            {
+                Text = Title = "Добре Дошли!",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+
+            };
 
             _addApiary = new Button()
             {
-                Text = "Add Apiary"
+                Text = "Добави пчелин",
+                TextColor = Color.White,
+                BackgroundColor = Color.CornflowerBlue
             };
             _addApiary.Clicked += AddApiary;
             stackLayout.Children.Add(_addApiary);
 
             _getApiary = new Button()
             {
-                Text = "Get Apiary"
+                Text = "Към моите пчелини",
+                TextColor = Color.White,
+                BackgroundColor = Color.CornflowerBlue
             };
             _getApiary.Clicked += GetApiary;
             stackLayout.Children.Add(_getApiary);
 
             _addBeehive = new Button()
             {
-                Text = "Add Beehive"
+                Text = "Добави кошер",
+                TextColor = Color.White,
+                BackgroundColor = Color.CornflowerBlue
             };
             _addBeehive.Clicked += AddBeehive;
             stackLayout.Children.Add(_addBeehive);
 
             _getBeehive = new Button()
             {
-                Text = "Get Beehive"
+                Text = "Към моите кошери",
+                TextColor = Color.White,
+                BackgroundColor = Color.CornflowerBlue
             };
             _getBeehive.Clicked += GetBeehive;
             stackLayout.Children.Add(_getBeehive);
 
             _statistic = new Button()
             {
-                Text = "Statistic"
+                Text = "Към статистика",
+                TextColor = Color.White,
+                BackgroundColor = Color.CornflowerBlue
             };
             _statistic.Clicked += Statistic;
             stackLayout.Children.Add(_statistic);

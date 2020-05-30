@@ -9,238 +9,270 @@ using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views
 {
-	public class TableCompareBeehives : ContentPage
-{
-        private SQLiteConnection db;
-    public TableCompareBeehives(string databasePath, Beehive beehive1, Beehive beehive2)
+    public class TableCompareBeehives : ContentPage
     {
+        private SQLiteConnection db;
+        public TableCompareBeehives(string databasePath, Beehive beehive1, Beehive beehive2)
+        {
             db = new SQLiteConnection(databasePath);
             StackLayout stackLayout = new StackLayout();
+            stackLayout.BackgroundColor = Color.AliceBlue;
+           
+            StackLayout compareStack = new StackLayout();
 
-            Grid grid = new Grid()
+            Label header1 = new Label
             {
-                ColumnDefinitions =
-                {
-                    new ColumnDefinition(){Width = GridLength.Star},
-                    new ColumnDefinition(){Width = GridLength.Star},
-                    new ColumnDefinition(){Width = GridLength.Star}
-                },
-                Padding = 0,
-                VerticalOptions = LayoutOptions.Center
+                FontSize = 30,
+                Text = "Данни за кошер 1:"
+            };
+            compareStack.Children.Add(header1);
+
+            Label apiary = new Label
+            {
+                FontSize = 15,
+                Text = $"Пчелин: {db.Query<Apiary>("select * from Apiary where id = " + beehive1.ApiaryID).First().ToString()}"
             };
 
-            grid.Children.Add(new Label()
+            Label name1 = new Label
             {
-                Text = "Характеристика",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 0, 0);
+                FontSize = 15,
+                Text = $"Име: {beehive1.Name}"
+            };
+            compareStack.Children.Add(name1);
 
-            grid.Children.Add(new Label()
+            Label number1 = new Label
             {
-                Text = beehive1.Name,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 1, 0);
+                FontSize = 15,
+                Text = $"Номер: {beehive1.Number}"
+            };
+            compareStack.Children.Add(number1);
 
-            grid.Children.Add(new Label()
+            Label type1 = new Label
             {
-                Text = beehive2.Name,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 2, 0);
+                FontSize = 15,
+                Text = $"Тип кошер: {beehive1.TypeBeehive}"
+            };
+            compareStack.Children.Add(type1);
 
-            grid.Children.Add(new Label()
+            Label type2 = new Label
             {
-                Text = "Номер",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 0, 1);
+                FontSize = 15,
+                Text = $"Тип пчели: {beehive1.TypeBees}"
+            };
+            compareStack.Children.Add(type2);
 
-            grid.Children.Add(new Label()
+            Label stores = new Label
             {
-                Text = beehive1.Number,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 1, 1);
+                FontSize = 15,
+                Text = $"Магазини: {beehive1.Stores}"
+            };
+            compareStack.Children.Add(stores);
 
-            grid.Children.Add(new Label()
+            Label production1 = new Label
             {
-                Text = beehive2.Number,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 2, 1);
+                FontSize = 15,
+                Text = $"Продукция: {beehive1.Production}"
+            };
+            compareStack.Children.Add(production1);
 
-            grid.Children.Add(new Label()
+            Label honey = new Label
             {
-                Text = "Тип кошер",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 0, 2);
+                FontSize = 15,
+                Text = $"Мед: {beehive1.Honey}"
+            };
+            compareStack.Children.Add(honey);
 
-            grid.Children.Add(new Label()
+            Label wax = new Label
             {
-                Text = beehive1.TypeBeehive,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 1, 2);
+                FontSize = 15,
+                Text = $"Восък: {beehive1.Wax}"
+            };
+            compareStack.Children.Add(wax);
 
-            grid.Children.Add(new Label()
+            Label propolis = new Label
             {
-                Text = beehive2.TypeBeehive,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 2, 2);
+                FontSize = 15,
+                Text = $"Прополис: {beehive1.Propolis}"
+            };
+            compareStack.Children.Add(propolis);
 
-            grid.Children.Add(new Label()
+            Label pollen = new Label
             {
-                Text = "Тип пчели",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 0, 3);
+                FontSize = 15,
+                Text = $"Цветен прашец: {beehive1.Pollen}"
+            };
+            compareStack.Children.Add(pollen);
 
-            grid.Children.Add(new Label()
+            Label royalJelly = new Label
             {
-                Text = beehive1.TypeBees,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 1, 3);
+                FontSize = 15,
+                Text = $"Пчелно млечице: {beehive1.RoyalJelly}"
+            };
+            compareStack.Children.Add(royalJelly);
 
-            grid.Children.Add(new Label()
+            Label poison = new Label
             {
-                Text = beehive2.TypeBees,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 2, 3);
+                FontSize = 15,
+                Text = $"Отрова: {beehive1.Poison}"
+            };
+            compareStack.Children.Add(poison);
 
-            grid.Children.Add(new Label()
+            Label feedings = new Label
             {
-                Text = "Магазини",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 0, 4);
+                FontSize = 15,
+                Text = $"Хранения: {beehive1.Feedings}"
+            };
+            compareStack.Children.Add(feedings);
 
-            grid.Children.Add(new Label()
+            Label review = new Label
             {
-                Text = beehive1.Stores.ToString(),
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 1, 4);
+                FontSize = 15,
+                Text = $"Прегледи: {beehive1.Reviews}"
+            };
+            compareStack.Children.Add(review);
 
-            grid.Children.Add(new Label()
+            Label treatments = new Label
             {
-                Text = beehive2.Stores.ToString(),
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 2, 4);
+                FontSize = 15,
+                Text = $"Третирания: {beehive1.Treatments}"
+            };
+            compareStack.Children.Add(treatments);
 
-            grid.Children.Add(new Label()
+            Label header2 = new Label
             {
-                Text = "Продукция",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 0, 5);
+                FontSize = 30,
+                Text = "Данни за кошер 2:"
+            };
+            compareStack.Children.Add(header2);
 
-            grid.Children.Add(new Label()
+            Label apiary2 = new Label
             {
-                Text = beehive1.Production.ToString(),
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 1, 5);
+                FontSize = 15,
+                Text = $"Пчелин: {db.Query<Apiary>("select * from Apiary where id = " + beehive2.ApiaryID).First().ToString()}"
+            };
+            compareStack.Children.Add(apiary2);
 
-            grid.Children.Add(new Label()
+            Label name2 = new Label
             {
-                Text = beehive2.Production.ToString(),
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 2, 5);
+                FontSize = 15,
+                Text = $"Име: {beehive2.Name}"
+            };
+            compareStack.Children.Add(name2);
 
-            grid.Children.Add(new Label()
+            Label number2 = new Label
             {
-                Text = "Сила",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 0, 6);
+                FontSize = 15,
+                Text = $"Номер: {beehive2.Number}"
+            };
+            compareStack.Children.Add(number1);
 
-            grid.Children.Add(new Label()
+            Label typeBeehive1 = new Label
             {
-                Text = beehive1.Power.ToString(),
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 1, 6);
+                FontSize = 15,
+                Text = $"Тип кошер: {beehive2.TypeBeehive}"
+            };
+            compareStack.Children.Add(typeBeehive1);
 
-            grid.Children.Add(new Label()
+            Label typeBee2 = new Label
             {
-                Text = beehive2.Power.ToString(),
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 2, 6);
+                FontSize = 15,
+                Text = $"Тип пчели: {beehive2.TypeBees}"
+            };
+            compareStack.Children.Add(typeBee2);
 
-            grid.Children.Add(new Label()
+            Label stores2 = new Label
             {
-                Text = "Хранения",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 0, 7);
+                FontSize = 15,
+                Text = $"Магазини: {beehive2.Stores}"
+            };
+            compareStack.Children.Add(stores2);
 
-            grid.Children.Add(new Label()
+            Label production2 = new Label
             {
-                Text = beehive1.Feedings.ToString(),
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 1, 7);
+                FontSize = 15,
+                Text = $"Продукция: {beehive2.Production}"
+            };
+            compareStack.Children.Add(production2);
 
-            grid.Children.Add(new Label()
+            Label honey2 = new Label
             {
-                Text = beehive2.Feedings.ToString(),
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 2, 7);
+                FontSize = 15,
+                Text = $"Мед: {beehive2.Honey}"
+            };
+            compareStack.Children.Add(honey2);
 
-            grid.Children.Add(new Label()
+            Label wax2 = new Label
             {
-                Text = "Прегледи",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 0, 8);
+                FontSize = 15,
+                Text = $"Восък: {beehive2.Wax}"
+            };
+            compareStack.Children.Add(wax2);
 
-            grid.Children.Add(new Label()
+            Label propolis2 = new Label
             {
-                Text = beehive1.Reviews.ToString(),
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 1, 8);
+                FontSize = 15,
+                Text = $"Прополис: {beehive2.Propolis}"
+            };
+            compareStack.Children.Add(propolis2);
 
-            grid.Children.Add(new Label()
+            Label pollen2 = new Label
             {
-                Text = beehive2.Reviews.ToString(),
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 2, 8);
+                FontSize = 15,
+                Text = $"Цветен прашец: {beehive2.Pollen}"
+            };
+            compareStack.Children.Add(pollen2);
 
-            grid.Children.Add(new Label()
+            Label royalJelly2 = new Label
             {
-                Text = "Третирания",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 0, 9);
+                FontSize = 15,
+                Text = $"Пчелно млечице: {beehive2.RoyalJelly}"
+            };
+            compareStack.Children.Add(royalJelly2);
 
-            grid.Children.Add(new Label()
+            Label poison2 = new Label
             {
-                Text = beehive1.Treatments.ToString(),
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 1, 9);
+                FontSize = 15,
+                Text = $"Отрова: {beehive2.Poison}"
+            };
+            compareStack.Children.Add(poison2);
 
-            grid.Children.Add(new Label()
+            Label feedings2 = new Label
             {
-                Text = beehive2.Treatments.ToString(),
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            }, 2, 9);
+                FontSize = 15,
+                Text = $"Хранения: {beehive2.Feedings}"
+            };
+            compareStack.Children.Add(feedings2);
 
-            stackLayout.Children.Add(grid);
-            Content = stackLayout;
+            Label review2 = new Label
+            {
+                FontSize = 15,
+                Text = $"Прегледи: {beehive2.Reviews}"
+            };
+            compareStack.Children.Add(review2);
+
+            Label treatments2 = new Label
+            {
+                FontSize = 15,
+                Text = $"Третирания: {beehive2.Treatments}"
+            };
+            compareStack.Children.Add(treatments2);
+
+            Button button = new Button
+            {
+                HorizontalOptions = LayoutOptions.Center,
+                Text = "Назад"
+            };
+            button.Clicked += ExitIsClicked;
+            compareStack.Children.Add(button);
+            Content = new ScrollView
+            {
+                Content = compareStack
+            };
         }
-}
+
+        private async void ExitIsClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+    }
 }

@@ -49,7 +49,7 @@ namespace My_Bees_Diary.Views
         {
             var item = (MainPageItem)e.SelectedItem;
             Type page = item.TargetType;
-            Detail = new NavigationPage((Page)Activator.CreateInstance(page, item.args));
+            Detail = new NavigationPage((Page)Activator.CreateInstance(page, item.args = new object[] { _dbPath }));
             IsPresented = false;
 
         }

@@ -13,6 +13,8 @@ namespace My_Bees_Diary.Views
     public class AddApiaryPage : ContentPage
     {
         private SQLiteConnection db;
+        private Label label;
+        private Label label2;
         private string _dbPath;
         private Entry apiaryName;
         private Entry apiaryNumber;
@@ -26,6 +28,23 @@ namespace My_Bees_Diary.Views
             db = new SQLiteConnection(dbPath);
             _dbPath = dbPath;
             StackLayout stackLayout = new StackLayout();
+            stackLayout.BackgroundColor = Color.AliceBlue;
+            label = new Label()
+            {
+                Text = Title = "Дoбавете нов пчелин",
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+
+            };
+            Label label2 = new Label()
+            {
+                Text = "Име на пчелин",
+                FontSize = 15,
+                TextColor=Color.DarkBlue
+
+            };
+            stackLayout.Children.Add(label2);
+
             apiaryName = new Entry
             {
                 Placeholder = "Въведете име на пчелина",
@@ -34,6 +53,15 @@ namespace My_Bees_Diary.Views
             };
             stackLayout.Children.Add(apiaryName);
 
+            Label label3 = new Label()
+            {
+                Text = "Номер на пчелин",
+                FontSize = 15,
+                TextColor = Color.DarkBlue
+
+            };
+            stackLayout.Children.Add(label3);
+
             apiaryNumber = new Entry
             {
                 Placeholder = "Въведете номер на пчелина",
@@ -41,6 +69,15 @@ namespace My_Bees_Diary.Views
 
             };
             stackLayout.Children.Add(apiaryNumber);
+
+            Label label4 = new Label()
+            {
+                Text = "Вид на пчелин",
+                FontSize = 15,
+                TextColor = Color.DarkBlue
+
+            };
+            stackLayout.Children.Add(label4);
 
             apiaryType = new Picker();
             apiaryType.Title = "Изберете вида на пчелина";
@@ -58,6 +95,15 @@ namespace My_Bees_Diary.Views
                 );
             stackLayout.Children.Add(apiaryType);
 
+            Label label5 = new Label()
+            {
+                Text = "Местоположение на пчелин",
+                FontSize = 15,
+                TextColor = Color.DarkBlue
+
+            };
+            stackLayout.Children.Add(label5);
+
             apiaryLocation = new Entry
             {
                 Placeholder = "Въведете местоположението на пчелина",
@@ -67,11 +113,15 @@ namespace My_Bees_Diary.Views
 
             add = new Button();
             add.Text = "Добави пчелин";
+            add.BackgroundColor = Color.CornflowerBlue;
+            add.TextColor = Color.White;
             add.Clicked += AddApiary;
             stackLayout.Children.Add(add);
 
             exit = new Button();
             exit.Text = "Назад";
+            exit.BackgroundColor = Color.CornflowerBlue;
+            exit.TextColor = Color.White;
             exit.Clicked += ExitPage;
             stackLayout.Children.Add(exit);
 

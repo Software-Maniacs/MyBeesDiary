@@ -2,14 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="My_Bees_Diary.Views.NoteContentPages.EditNotePage"
-             Title ="Редактиране">
+             Title ="Редактирай записка"
+             BackgroundColor="AliceBlue">
     <ContentPage.Content>
         <StackLayout>
-            <Entry x:Name="SummaryEntry" MaxLength="25" Placeholder="Въведете резюмето на записката."/>
+            <Label Text="Заглавие"/>
+            <Entry x:Name="SummaryEntry" MaxLength="25" Placeholder="Въведете заглавието на записката."/>
+            <Label Text="Съдържание"/>
             <Editor x:Name="DescriptionEditor" AutoSize="TextChanges" Placeholder="Въведете съдържанието на записката." />
             <Entry x:Name="DateEntry" IsReadOnly="True"></Entry>
-            <Button x:Name="EditButton" Text="Въведи" HorizontalOptions="Fill" Clicked="EditButton_Clicked"></Button>
-            <Button x:Name="DeleteButton" Text="Изтрий" HorizontalOptions="Fill"  Clicked="DeleteButton_Clicked"/>
+            <Button x:Name="EditButton" Text="Въведи" HorizontalOptions="Fill"  BackgroundColor="CornflowerBlue" TextColor="White" Clicked="EditButton_Clicked"></Button>
+            <Button x:Name="DeleteButton" Text="Изтрий" HorizontalOptions="Fill"  BackgroundColor="CornflowerBlue" TextColor="White" Clicked="DeleteButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
