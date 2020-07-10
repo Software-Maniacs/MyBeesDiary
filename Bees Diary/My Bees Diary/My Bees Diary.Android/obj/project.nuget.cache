@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+Cz01kPRjsPuSm+KKC1e0q4bs4vt2Tc3YdOU0bK0u9rZyVHoWMJ9tkvKG7w61rs0pMinvACU2Tmc12CuxAzpcw==",
+  "dgSpecHash": "7oYtkBXZWoS9z1jPuB3TDAbDt4et3wXFB9J8KF9rvkbUUpxjBrPQ0Y6Tc6+++d5IWMoax1a7nBXlQ4df/rmedA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary-master\\Bees Diary\\My Bees Diary\\My Bees Diary.Android\\My Bees Diary.Android.csproj",
+  "projectFilePath": "C:\\Users\\Laptop_HP\\Desktop\\MyBeesDiary2\\Bees Diary\\My Bees Diary\\My Bees Diary.Android\\My Bees Diary.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Laptop_HP\\.nuget\\packages\\json.net\\1.0.22\\json.net.1.0.22.nupkg.sha512",
     "C:\\Users\\Laptop_HP\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

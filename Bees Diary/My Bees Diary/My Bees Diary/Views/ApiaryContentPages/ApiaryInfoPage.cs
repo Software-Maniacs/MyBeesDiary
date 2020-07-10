@@ -1,9 +1,14 @@
 ﻿using My_Bees_Diary.Models.Entities;
+using Newtonsoft.Json;
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace My_Bees_Diary.Views.ApiaryContentPages
@@ -36,6 +41,8 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
             _apiary = apiary;
             db = new SQLiteConnection(dbPath);
             StackLayout stackLayout = new StackLayout();
+
+            Title = GetTitle();
 
             apiaryName = new Entry
             {
@@ -70,7 +77,7 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
                 Text = _apiary.Location
             };
             stackLayout.Children.Add(apiaryLocation);
-                        
+
             update = new Button()
             {
                 Text = "Запази промените"
@@ -143,6 +150,68 @@ namespace My_Bees_Diary.Views.ApiaryContentPages
 
             await DisplayAlert(null, "Вие направихте промяна в пчелин " + apiaryName.Text + ".", "OK");
             await Navigation.PushAsync(new ApiariesListView(db.DatabasePath));
+        }
+
+        private string GetTemperature()
+        {
+            string result = "Няма поставена метеорологична станция.";
+
+            using (var webClient = new WebClient())
+            {
+                string json = webClient.DownloadString("http://petar-petrov.com/apiary/api.php");
+                ObservableCollection<WeatherStationTemperature> temperatures = JsonConvert.DeserializeObject<ObservableCollection<WeatherStationTemperature>>(json);
+
+                int startIndex = temperatures.Count - 1;
+                for (int i = startIndex; i >= 0; i--)
+                {
+                    if (_apiary.ID == temperatures[i].apiary_id)
+                    {
+                        result = temperatures[i].ToString();
+                        break;
+                    }
+                }
+
+                webClient.CancelAsync();
+            }
+
+            return result;
+        }
+
+        private string GetHumidity()
+        {
+            string result = "";
+            using(var webClient = new WebClient())
+            {
+                string json = webClient.DownloadString("http://petar-petrov.com/apiary/api.php");
+                ObservableCollection<WeatherStationHumidity> humidities = JsonConvert.DeserializeObject<ObservableCollection<WeatherStationHumidity>>(json);
+
+                int startIndex = humidities.Count - 1;
+                for (int i = startIndex; i >= 0; i--)
+                {
+                    if(_apiary.ID == humidities[i].apiary_id)
+                    {
+                        result = humidities[i].ToString();
+                        break;
+                    }
+                }
+
+                webClient.CancelAsync();
+            }
+
+            return result;
+        }
+
+        private string GetTitle()
+        {
+            string result = "Няма поставена метеорологична станция.";
+            string getTemperature = GetTemperature();
+
+            if(result != getTemperature)
+            {
+                result = "Температура: " + getTemperature + " Влажност: " + GetHumidity();
+            }
+
+            return result;
         }
     }
 }

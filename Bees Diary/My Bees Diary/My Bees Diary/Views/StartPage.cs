@@ -1,4 +1,6 @@
-﻿using System;
+﻿using My_Bees_Diary.Models.Entities;
+using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,6 +38,10 @@ namespace My_Bees_Diary.Views
         public StartPage(string databasePath)
         {
             dbPath = databasePath;
+            SQLiteConnection db = new SQLiteConnection(dbPath);
+            db.CreateTable<Apiary>();
+            db.CreateTable<Beehive>();
+            db.CreateTable<Note>();
 
             StackLayout stackLayout = new StackLayout();
             stackLayout.Spacing = 20;
